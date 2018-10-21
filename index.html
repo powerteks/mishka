@@ -7,26 +7,42 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
   <body>
-    <header class="page-header">
-      <div class="page-header__logo"></div>
-      <div class="page-header__button-main-nav"></div>
-      <div class="page-header__button-main-nav--close"></div>
-      <nav class="main-nav">
+    <header class="page__header">
+      <nav class="main-nav main-nav--closed main-nav--no-js">
+        <button class="main-nav__button-toggle">
+          <span class="visually-hidden">Mеню</span>
+        </button>
         <ul class="main-nav__list">
-          <li class="main-nav__item">Каталог товаров</li>
-          <li class="main-nav__item">Вязание на заказ</li>
-          <li class="main-nav__item">Поиск по сайту</li>
-          <li class="main-nav__item main-nav__cart">Корзина: <span class="main-nav__cart-status">пока пуста</span></li>
+          <li class="main-nav__item main-nav__head">
+            <a class="main-nav__link main-nav__logo main-nav__link--active"><span class="visually-hidden">Главная</span>
+              <img width="86px" height="35px" src="img/mishka_logo_mobile.png" alt="Mishka">
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Каталог товаров</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--cart" href="#">Корзина: <span class="main-nav__cart-status">пока пуста</span></a>
+          </li>
         </ul>
       </nav>
     </header>
     <main class="page-main">
-      <div class="main-slogan">
-        <h1 class="main-slogan__title">Милые штучки ручной работы для дома</h1>
+      <div class="page-main__slogan">
+        <h1 class="page-main__title">Милые штуки ручной</br> работы для дома</h1>
       </div>
       <section class="main-products">
-        <div class="main-products__interior">
-          <div class="main-products__card">Предметы интерьера</div>
+        <div class="main-products__item">
+          <div class="main-products__card main-products__card--left">
+            <span>Предметы интерьера</span>
+            <img class="main-products__image main-products__image--interior" src="img/icon-interior.png">
+          </div>
           <ul class="product-card">
             <li>
               <h2 class="product-card__product-name"></h2>
@@ -56,102 +72,135 @@
             </li>
           </ul>
         </div>
-        <div class="main-products__toys">
-          <div class="main-products__card">Детские игрушки</div>
+        <div class="main-products__item">
+          <div class="main-products__card main-products__card--right main-products__card--opened">
+            <span>Детские игрушки</span>
+            <img class="main-products__image main-products__image--toys" src="img/icon-toys.png">
+          </div>
           <ul class="product-card">
             <li>
-              <h2 class="product-card__product-name">Вязанные корзинки</h2>
+              <h2 class="product-card__product-name">Вязаные корзинки</h2>
             </li>
             <li class="product-card__remark">Товар недели</li>
             <li class="product-card__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</li>
             <li>
               <table class="product-card__specification-list">
-                <tr class="product-card__color">
-                  <td>Цвет:</td>
-                  <td>«Тифани»/серый</td>
+                <tr class="product-card__line product-card__color">
+                  <td class="product-card__name-property">Цвет:</td>
+                  <td class="product-card__property">«Тиффани»/серый</td>
                 </tr>
-                <tr class="product-card__diameter">
-                  <td>Диаметр:</td>
-                  <td>25 см</td>
+                <tr class="product-card__line product-card__diameter">
+                  <td class="product-card__name-property">Диаметр:</td>
+                  <td class="product-card__property">25 см</td>
                 </tr>
-                <tr class="product-card__height">
-                  <td>Высота:</td>
-                  <td>15 см</td>
+                <tr class="product-card__line product-card__height">
+                  <td class="product-card__name-property">Высота:</td>
+                  <td class="product-card__property">15 см</td>
                 </tr>
               </table>
             </li>
-            <li class="product-card__photo"></li>
+            <li>
+              <img  class="product-card__photo" src="img/knitted-baskets.jpg">
+            </li>
             <li class="product-card__price">Цена: <span>990</span> руб.</li>
             <li>
-              <a class="product-card__button-buy button" href="#">Заказать</a>
+              <button class="product-card__button-buy button" type="button"><span>Заказать</span></button>
             </li>
           </ul>
         </div>
+        <div class="main-products__border border"></div>
       </section>
       <section class="short-about">
         <h2 class="short-about__title">Коротко о нас:</h2>
         <ul class="short-about__list">
           <li class="short-about__item">
-            <img src="" alt="" class="short-about__image">
-            <p class="short-about__advantages">Экологически чистые материалы</p>
+            <p class="short-about__advantages short-about__advantages--flower">Экологически </br>чистые материалы</p>
           </li>
           <li class="short-about__item">
-            <img src="" alt="" class="short-about__image">
-            <p class="short-about__advantages">Скандинавский стиль по российской цене</p>
+            <p class="short-about__advantages short-about__advantages--money">Скандинавский стиль </br>по российской цене</p>
           </li>
           <li class="short-about__item">
-            <img src="" alt="" class="short-about__image">
-            <p class="short-about__advantages">Увеличивает лайки на фотографиях</p>
+            <p class="short-about__advantages short-about__advantages--heart">Увеличивает лайки </br>на фотографиях</p>
           </li>
           <li class="short-about__item">
-            <img src="" alt="" class="short-about__image">
-            <p class="short-about__advantages">Связано вручную с любовью и умилением</p>
+            <p class="short-about__advantages short-about__advantages--ball">Связано вручную с </br>любовью и умилением</p>
           </li>
           <li class="short-about__item">
-            <img src="" alt="" class="short-about__image">
-            <p class="short-about__advantages">Поддержка отечественного производителя</p>
+            <p class="short-about__advantages short-about__advantages--rocket">Поддержка отечественного </br>производителя</p>
           </li>
           <li class="short-about__item">
-            <img src="" alt="" class="short-about__image">
-            <p class="short-about__advantages">Поставляется в подарочной упаковке</p>
+            <p class="short-about__advantages short-about__advantages--box">Поставляется в </br>подарочной упаковке</p>
           </li>
         </ul>
       </section>
       <section class="comments">
-        <h2 class="comments__tiile">Отзывы</h2>
+        <h2 class="comments__title">Отзывы</h2>
         <ul class="comments__slider">
-          <li class="comments__item">
+          <li class="comments__item comments__item-show">
             <p class="comments__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
             <span class="comments__author">Анастасия Красильникова</span>
-            <span class="comments__login-author">@misssssiskras</span>
+            <span class="comments__login">@misssssiskras</span>
           </li>
-          <li class="comments__item"></li>
+          <li class="comments__item">
+            <p class="comments__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Ты семантика, которое наш коварных языком выйти реторический взобравшись, бросил до. Моей собрал приставка рекламных маленькая семь даже рыбными взгляд!</p>
+            <span class="comments__author">Анастас Красивников</span>
+            <span class="comments__login">@anastas</span>
+          </li>
+          <li class="comments__item">
+            <p class="comments__text">Моей собрал приставка рекламных маленькая семь даже рыбными взгляд. Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Ты семантика, которое наш коварных языком выйти реторический взобравшись, бросил дома!</p>
+            <span class="comments__author">Дмитрий Каширин</span>
+            <span class="comments__login">@kassha</span>
+          </li>
         </ul>
-        <a class="comments__button-write button" href="#">Написать</a>
+        <div class="comments__control">
+          <button class="comments__button comments__button--previous"><span class="visually-hidden">Предыдущее</span>
+            <img src="img/comments_button_arrow.png" alt="" class="comments__arrow">
+          </button>
+          <button class="comments__button comments__button--next"><span class="visually-hidden">Следующее</span>
+            <img src="img/comments_button_arrow.png" alt="" class="comments__arrow">
+          </button>
+        </div>
+        <a class="comments__button-write button" href="#"><span>Написать</span></a>
+        <div class="comments__border border"></div>
       </section>
       <section class="contacts">
+        <div class="contacts__title">Контакты</div>
         <table class="contacts__list">
-          <th class="contacts__title">Контакты</th>
-          <tr class="contacts__email">
-            <td>e-mail:</td>
-            <td>info@mimimishkashop.ru</td>
+          <tr class="contacts__line contacts__email">
+            <td class="contacts__name">e-mail:</td>
+            <td class="contacts__info">
+              <a class="contacts__email-link" href="#">info@mimimishkashop.ru</a>
+            </td>
           </tr>
-          <tr class="contacts__address">
-            <td>адрес</td>
-            <td>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+          <tr class="contacts__line contacts__address">
+            <td class="contacts__name">адрес:</td>
+            <td class="contacts__info">г. Санкт-Петербург, </br>ул. Большая Конюшенная, </br>д. 19/8, офис 101</td>
           </tr>
         </table>
-        <div class="contacts__map"></div>
+        <div class="contacts__wrapper-map">
+          <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aedd58cfa11bff1d8a5924b9e9b00afe0e49b15dbf8140b7b2dd8a01c3d998474&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+        </div>
         <a class="contacts__button-write button" href="#">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
       <ul class="page-footer__social-networks">
-        <li class="page-footer__instagram"></li>
-        <li class="page-footer__facebook"></li>
-        <li class="page-footer__twitter"></li>
+        <li class="page-footer__social-item page-footer__instagram">
+          <a href="#"><img src="img/icon-instagram.png" alt=""></a>
+        </li>
+        <li class="page-footer__social-item page-footer__facebook">
+          <a href="#"><img src="img/icon-facebook.png" alt=""></a>
+        </li>
+        <li class="page-footer__social-item page-footer__twitter">
+          <a href="#"><img src="img/icon-twitter.png" alt=""></a>
+        </li>
       </ul>
-      <a class="page-footer__developed" href="#">Разработано</a>
+      <div class="page-footer__copyright">
+        <a class="page-footer__link-copyright" href="#"><span>Разработано</span>
+          <img src="img/icon-copyright.png" alt="">
+        </a>
+      </div>
     </footer>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

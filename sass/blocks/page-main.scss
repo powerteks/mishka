@@ -1,0 +1,21 @@
+.page-main__slogan {
+  padding   : 30px;
+
+  background: $second-background url(../img/mishka_slogan-background_mobile.jpg) top -17px-2 center no-repeat;
+}
+
+.page-main__title {
+  margin-top    : 76px-30-7;
+  padding-bottom: 120px-48;
+  
+  font-family: "Open Sans Bold", sans-serif;
+  font-size  : 27px;
+  line-height: 31px;
+
+  text-align    : center;
+  letter-spacing: .2px;
+}
+
+.main-products__card--opened ~ .product-card {
+  display: block;
+}

@@ -1,0 +1,64 @@
+.main-products__card {
+  display    : flex;
+  padding    : 30px-5 9% 18px;
+  font-family: "Open Sans Bold", sans-serif;
+  font-size  : 19px;
+  line-height: 24px;
+  color      : $text-item;
+  background : $lite-item;
+  transition : .2s;
+
+  &:hover {
+    margin-top    : -5px;
+    padding-bottom: 35px;
+    transition    : .2s;
+    background    : $lite-item-hover;
+  }
+  &:hover .main-products__image {
+    opacity: .7;
+  }
+
+  &:active span,
+  &:active .main-products__image {
+    opacity: .3;
+  }
+}
+
+.main-products__card span {
+  display: block;
+  width  : 40%;
+}
+
+.main-products__image {
+  margin-left: auto;
+  opacity    : .5;
+}
+
+.main-products__image--interior {
+  margin-top  : -2px;
+  margin-right: 6px;
+}
+
+.main-products__image--toys {
+  margin-top    : -2px;
+  margin-right  : -3px;
+  padding-bottom: 2px;
+}
+
+.main-products__card--right {
+  background: $dark-item;
+  transition: .3s;
+
+  &:hover {
+    background: $dark-item-hover;
+    transition: .3s;
+  }
+}
+
+.main-products__card--opened ~ .product-card {
+  display: block;
+}
+
+.main-products__border {
+  margin-top: 36px;
+}
