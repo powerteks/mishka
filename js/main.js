@@ -3,8 +3,12 @@ var navMain    = document.querySelector('.main-nav'),
     commSlide  = document.querySelectorAll('.comments__item'),
     commPrev   = document.querySelector('.comments__button--previous'),
     commNext   = document.querySelector('.comments__button--next'),
+    linkBuy = document.querySelector('.product-card__buy'),
+    popupModal = document.querySelector('.modal'),
+    closeModal = document.querySelector('.modal__submit'),
     slideIndex = 0;
-    showSlide(slideIndex);
+
+showSlide(slideIndex);
 
 navMain.classList.remove('main-nav--no-js');
 
@@ -17,6 +21,16 @@ navToggle.addEventListener('click', function() {
       navMain.classList.add('main-nav--closed');
   }
 });
+
+linkBuy.addEventListener('click', function(event) {
+  event.preventDefault();
+  popupModal.classList.add("modal__show");
+})
+
+closeModal.addEventListener('click', function(event) {
+  event.preventDefault();
+  popupModal.classList.remove("modal__show");
+})
 
 commPrev.addEventListener('click', function(n) {
      showSlide(slideIndex -= 1);

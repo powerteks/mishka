@@ -4,6 +4,7 @@
 
 .contacts__title {
   margin     : 44px-9 0 43px-18;
+
   font-family: "Open Sans Bold", sans-serif;
   font-size  : 18px;
   line-height: 31px;
@@ -11,10 +12,13 @@
 
 .contacts__list {
   padding        : 0;
+
+  width          : 100%;
+
   border-collapse: collapse;
+
   font-size      : 15px;
   line-height    : 30px;
-  width          : 100%;
 
   & td {
     padding: 0;
@@ -22,9 +26,10 @@
 }
 
 .contacts__line {
-  display: flex;
-  flex-direction: row;
   padding-bottom: 40px-10;
+  
+  display       : flex;
+  flex-direction: row;
 }
 
 .contacts__name {
@@ -37,7 +42,9 @@
 
 .contacts__email-link {
   position       : relative;
+
   text-decoration: none;
+
   color          : $base-text;
 
   &:hover {
@@ -50,20 +57,24 @@
 }
 
 .contacts__email-link::after {
-  position  : absolute;
   content   : "";
+
+  position  : absolute;
+  right     : 0;
   bottom    : -5px;
   left      : 0;
-  right     : 0;
   height    : 1px;
+
   background: $email-remark;
 }
 
 .contacts__wrapper-map {
   margin  : 7px 0 39px -30px;
+
+  overflow: hidden;
+
   width   : 100vw;
   height  : 457px;
-  overflow: hidden;
 }
 
 .contacts__map {
@@ -72,7 +83,11 @@
 }
 
 .contacts__button-write {
+  margin-bottom  : 39px;
+
   display        : block;
-  color          : $base-text;
+
   text-decoration: none;
+
+  color          : $base-text;
 }

@@ -14,122 +14,203 @@
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__head">
-            <a class="main-nav__link main-nav__logo main-nav__link--active"><span class="visually-hidden">Главная</span>
-              <img width="86px" height="35px" src="img/mishka_logo_mobile.png" alt="Mishka">
+            <a class="main-nav__link main-nav__logo">
+              <span class="visually-hidden">Главная</span>
+              <svg class="main-nav__logo--mobile" width="86" height="35">
+                <use xlink:href="../img/sprite.svg#logo__mobile"></use>
+              </svg>
             </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Каталог товаров</a>
+            <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
+            <a class="main-nav__link main-nav__link--search" href="#">
+              <div class="main-nav__icon">
+                <svg class="icon icon--search" width="19" height="18">
+                  <use xlink:href="../img/sprite.svg#icon-search"></use>
+                </svg>
+              </div>
+              Поиск по сайту
+            </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--cart" href="#">Корзина: <span class="main-nav__cart-status">пока пуста</span></a>
+            <a class="main-nav__link main-nav__link--cart" href="#">
+              <div class="main-nav__icon">
+                <svg class="icon icon--cart" width="20" height="19">
+                  <use xlink:href="../img/sprite.svg#icon-cart"></use>
+                </svg>
+              </div>
+              Корзина: <span class="main-nav__cart-status">пока пуста</span>
+            </a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="page-main">
       <div class="page-main__slogan">
-        <h1 class="page-main__title">Милые штуки ручной</br> работы для дома</h1>
+        <h2 class="page-main__title">Милые штуки ручной <br/>работы для дома</h2>
       </div>
       <section class="main-products">
-        <div class="main-products__item">
-          <div class="main-products__card main-products__card--left">
-            <span>Предметы интерьера</span>
-            <img class="main-products__image main-products__image--interior" src="img/icon-interior.png">
-          </div>
-          <ul class="product-card">
-            <li>
-              <h2 class="product-card__product-name"></h2>
-            </li>
-            <li class="product-card__remark"></li>
-            <li class="product-card__description"></li>
-            <li>
-              <table>
-                <tr>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </table>
-            </li>
-            <li class="product-card__photo"></li>
-            <li class="product-card__price"></li>
-            <li>
-              <a class="product-card__button-buy button" href="#">Заказать</a>
-            </li>
-          </ul>
-        </div>
-        <div class="main-products__item">
-          <div class="main-products__card main-products__card--right main-products__card--opened">
-            <span>Детские игрушки</span>
-            <img class="main-products__image main-products__image--toys" src="img/icon-toys.png">
-          </div>
-          <ul class="product-card">
-            <li>
-              <h2 class="product-card__product-name">Вязаные корзинки</h2>
-            </li>
-            <li class="product-card__remark">Товар недели</li>
-            <li class="product-card__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</li>
-            <li>
-              <table class="product-card__specification-list">
-                <tr class="product-card__line product-card__color">
-                  <td class="product-card__name-property">Цвет:</td>
-                  <td class="product-card__property">«Тиффани»/серый</td>
-                </tr>
-                <tr class="product-card__line product-card__diameter">
-                  <td class="product-card__name-property">Диаметр:</td>
-                  <td class="product-card__property">25 см</td>
-                </tr>
-                <tr class="product-card__line product-card__height">
-                  <td class="product-card__name-property">Высота:</td>
-                  <td class="product-card__property">15 см</td>
-                </tr>
-              </table>
-            </li>
-            <li>
-              <img  class="product-card__photo" src="img/knitted-baskets.jpg">
-            </li>
-            <li class="product-card__price">Цена: <span>990</span> руб.</li>
-            <li>
-              <button class="product-card__button-buy button" type="button"><span>Заказать</span></button>
-            </li>
-          </ul>
-        </div>
-        <div class="main-products__border border"></div>
+        <input class="main-products__toggle" type="radio" name="toggle" id="main-interior" checked>
+        <input class="main-products__toggle" type="radio" name="toggle" id="main-toy">
+        <label class="main-products__item main-products__item--interior" for="main-interior">
+          <span>Предметы интерьера</span>
+          <svg class="main-products__icon icon-interior" width="40" height="60">
+            <use xlink:href="../img/sprite.svg#icon-interior"></use>
+          </svg>
+        </label>
+        <label class="main-products__item main-products__item--toys" for="main-toy">
+          <span>Детские игрушки</span>
+          <svg class="main-products__icon icon-toy" width="60" height="60">
+            <use xlink:href="../img/sprite.svg#icon-toy"></use>
+          </svg>
+        </label>
+        <ul class="product-card product-card--interior">
+          <li>
+            <h2 class="product-card__name">Вязаные корзинки</h2>
+          </li>
+          <li class="product-card__remark">Товар недели</li>
+          <li class="product-card__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</li>
+          <li>
+            <table class="product-card__list">
+              <tr class="product-card__line">
+                <td class="product-card__name-property">Цвет:</td>
+                <td class="product-card__property">«Тиффани»/серый</td>
+              </tr>
+              <tr class="product-card__line">
+                <td class="product-card__name-property">Диаметр:</td>
+                <td class="product-card__property">25 см</td>
+              </tr>
+              <tr class="product-card__line">
+                <td class="product-card__name-property">Высота:</td>
+                <td class="product-card__property">15 см</td>
+              </tr>
+            </table>
+          </li>
+          <li>
+            <img class="product-card__photo" src="img/knitted-baskets.jpg">
+          </li>
+          <li class="product-card__price">Цена: <span>990</span> руб.</li>
+          <li>
+            <button class="product-card__buy button" type="button"><span>Заказать</span></button>
+          </li>
+        </ul>
+        <ul class="product-card product-card--toy">
+          <li>
+            <h2 class="product-card__name">Пухляш</h2>
+          </li>
+          <li class="product-card__remark"></li>
+          <li class="product-card__description"></li>
+          <li>
+            <table class="product-card__list">
+              <tr class="product-card__line">
+                <td class="product-card__name-property"></td>
+                <td class="product-card__property"></td>
+              </tr>
+              <tr class="product-card__line">
+                <td class="product-card__name-property"></td>
+                <td class="product-card__property"></td>
+              </tr>
+              <tr class="product-card__line">
+                <td class="product-card__name-property"></td>
+                <td class="product-card__property"></td>
+              </tr>
+            </table>
+          </li>
+          <li>
+            <img class="product-card__photo src="">
+          </li>
+          <li class="product-card__price"><span></span></li>
+          <li>
+            <a class="product-card__buy button" href="#">Заказать</a>
+          </li>
+        </ul>
       </section>
+      <section class="modal">
+        <div class="modal__products">
+          <form method="post" action="#" id="modal-size" name="modal-size" class="modal__form">
+            <h2 class="modal__title">Добавить <br/>в корзину</h2>
+            <p class="modal__text">Выберите размер:</p>
+            <ul class="modal__list">
+              <li class="modal__item">
+                <label>
+                  <input type="radio" id="size_s" name="size_selection" class="modal__radio visually-hidden">
+                  <span class="modal__size">s</span>
+                </label>
+              </li>
+              <li class="modal__item">
+                <label>
+                  <input type="radio" id="size_m" name="size_selection" class="modal__radio visually-hidden">
+                  <span class="modal__size">m</span>
+                </label>
+              </li>
+              <li class="modal__item">
+                <label>
+                  <input type="radio" id="size_l" name="size_selection" class="modal__radio visually-hidden">
+                  <span class="modal__size">l</span>
+                </label>
+              </li>
+            </ul>
+            <input type="submit" id="add_size" name="add_size" value="Добавить" class="modal__submit button">
+          </form>
+        </div>
+        <div class="modal__overlay"></div>
+      </section>
+      <div class="main-products__border border"></div>
       <section class="short-about">
         <h2 class="short-about__title">Коротко о нас:</h2>
         <ul class="short-about__list">
           <li class="short-about__item">
-            <p class="short-about__advantages short-about__advantages--flower">Экологически </br>чистые материалы</p>
+            <div class="short-about__icon">
+              <svg class="icon icon-flower" width="32" height="37">
+                <use xlink:href="../img/sprite.svg#icon-flower"></use>
+              </svg>
+            </div>
+            <p class="short-about__advantages short-about__advantages--flower">Экологически <br/>чистые материалы</p>
           </li>
           <li class="short-about__item">
-            <p class="short-about__advantages short-about__advantages--money">Скандинавский стиль </br>по российской цене</p>
+            <div class="short-about__icon">
+              <svg class="icon icon-money" width="47" height="27">
+                <use xlink:href="../img/sprite.svg#icon-money"></use>
+              </svg>
+            </div>
+            <p class="short-about__advantages short-about__advantages--money">Скандинавский стиль <br/>по российской цене</p>
           </li>
           <li class="short-about__item">
-            <p class="short-about__advantages short-about__advantages--heart">Увеличивает лайки </br>на фотографиях</p>
+            <div class="short-about__icon">
+              <svg class="icon icon-heart" width="33" height="28">
+                <use xlink:href="../img/sprite.svg#icon-heart"></use>
+              </svg>
+            </div>
+            <p class="short-about__advantages short-about__advantages--heart">Увеличивает лайки <br/>на фотографиях</p>
           </li>
           <li class="short-about__item">
-            <p class="short-about__advantages short-about__advantages--ball">Связано вручную с </br>любовью и умилением</p>
+            <div class="short-about__icon">
+              <svg class="icon icon-ball" width="34" height="34">
+                <use xlink:href="../img/sprite.svg#icon-ball"></use>
+              </svg>
+            </div>
+            <p class="short-about__advantages short-about__advantages--ball">Связано вручную с <br/>любовью и умилением</p>
           </li>
           <li class="short-about__item">
-            <p class="short-about__advantages short-about__advantages--rocket">Поддержка отечественного </br>производителя</p>
+            <div class="short-about__icon">
+              <svg class="icon icon-rocket" width="54" height="23">
+                <use xlink:href="../img/sprite.svg#icon-rocket"></use>
+              </svg>
+            </div>
+            <p class="short-about__advantages short-about__advantages--rocket">Поддержка отечественного <br/>производителя</p>
           </li>
           <li class="short-about__item">
-            <p class="short-about__advantages short-about__advantages--box">Поставляется в </br>подарочной упаковке</p>
+            <div class="short-about__icon">
+              <svg class="icon icon-box" width="35" height="35">
+                <use xlink:href="../img/sprite.svg#icon-box"></use>
+              </svg>
+            </div>
+            <p class="short-about__advantages short-about__advantages--box">Поставляется в <br/>подарочной упаковке</p>
           </li>
         </ul>
       </section>
@@ -154,15 +235,15 @@
         </ul>
         <div class="comments__control">
           <button class="comments__button comments__button--previous"><span class="visually-hidden">Предыдущее</span>
-            <img src="img/comments_button_arrow.png" alt="" class="comments__arrow">
+            <div class="comments__arrow"></div>
           </button>
           <button class="comments__button comments__button--next"><span class="visually-hidden">Следующее</span>
-            <img src="img/comments_button_arrow.png" alt="" class="comments__arrow">
+            <div class="comments__arrow"></div>
           </button>
         </div>
-        <a class="comments__button-write button" href="#"><span>Написать</span></a>
-        <div class="comments__border border"></div>
-      </section>
+        <a class="comments__button-write button" href="#">Написать</a>
+      </section>  
+      <div class="comments__border border"></div>
       <section class="contacts">
         <div class="contacts__title">Контакты</div>
         <table class="contacts__list">
@@ -174,7 +255,7 @@
           </tr>
           <tr class="contacts__line contacts__address">
             <td class="contacts__name">адрес:</td>
-            <td class="contacts__info">г. Санкт-Петербург, </br>ул. Большая Конюшенная, </br>д. 19/8, офис 101</td>
+            <td class="contacts__info">г. Санкт-Петербург, <br/>ул. Большая Конюшенная, <br/>д. 19/8, офис 101</td>
           </tr>
         </table>
         <div class="contacts__wrapper-map">
@@ -184,20 +265,34 @@
       </section>
     </main>
     <footer class="page-footer">
-      <ul class="page-footer__social-networks">
-        <li class="page-footer__social-item page-footer__instagram">
-          <a href="#"><img src="img/icon-instagram.png" alt=""></a>
+      <ul class="page-footer__socials">
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link" href="#">
+            <svg class="page-footer__icon icon-instagram" width="28" height="21">
+              <use xlink:href="../img/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
         </li>
-        <li class="page-footer__social-item page-footer__facebook">
-          <a href="#"><img src="img/icon-facebook.png" alt=""></a>
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link" href="#">
+            <svg class="page-footer__icon icon-facebook" width="15" height="28">
+              <use xlink:href="../img/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
         </li>
-        <li class="page-footer__social-item page-footer__twitter">
-          <a href="#"><img src="img/icon-twitter.png" alt=""></a>
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link" href="#">
+            <svg class="page-footer__icon icon-twitter" width="23" height="20">
+              <use xlink:href="../img/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
         </li>
       </ul>
       <div class="page-footer__copyright">
-        <a class="page-footer__link-copyright" href="#"><span>Разработано</span>
-          <img src="img/icon-copyright.png" alt="">
+        <a class="page-footer__link-copyright" href="#">Разработано
+          <svg class="page-footer__academy" width="27" height="34">
+            <use xlink:href="../img/sprite.svg#icon-academy"></use>
+          </svg>
         </a>
       </div>
     </footer>

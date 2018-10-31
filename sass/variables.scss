@@ -1,17 +1,25 @@
 $base-text        : hsl(0, 0%, 0%);
 $base-background  : hsl(0, 0%, 100%);
 $second-background: hsl(0, 0%, 95%);
+$slogan-background: hsl(0, 0%, 98%);
+$link-hover       : hsl(0, 0%, 56%);
 $lite-item        : hsl(168, 55%, 60%);
 $lite-item-hover  : hsl(168, 60%, 59%);
 $dark-item        : hsl(171, 48%, 55%);
 $dark-item-hover  : hsl(171, 50%, 52%);
+$icon-product     : hsl(172, 76%, 32%);
 $text-item        : hsl(0, 0%, 100%);
 $text-remark      : hsl(168, 54%, 60%);
 $button-hover     : hsl(0, 0%, 27%);
 $button-text      : hsl(0, 0%, 100%);
 $email-remark     : hsl(168, 55%, 60%);
+$form-active      : hsl(0, 0%, 81%);
+$text-placeholder : hsl(0, 0%, 84%);
+$gray-line        : hsl(0, 0%, 93%);
+$modal-hover      : hsl(0, 0%, 78%);
 
-$border-gray: 1px solid hsl(0, 0%, 93%);
+
+$border-gray: 1px solid $gray-line;
 
 $mobile-width : 780px;
 $tablet-width : 781px;

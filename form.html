@@ -14,43 +14,176 @@
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__head">
-            <a class="main-nav__link main-nav__logo" href="index.html"><span class="visually-hidden">Главная</span>
-              <img width="86px" height="35px" src="img/mishka_logo_mobile.png" alt="Mishka">
+            <a class="main-nav__link main-nav__logo" href="index.html">
+              <span class="visually-hidden">Главная</span>
+              <svg class="main-nav__logo--mobile" width="86" height="35">
+                <use xlink:href="../img/sprite.svg#logo__mobile"></use>
+              </svg>
             </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Каталог товаров</a>
+            <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link  main-nav__link--active">Вязание на заказ</a>
+            <a class="main-nav__link">Вязание на заказ</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
+            <a class="main-nav__link main-nav__link--search" href="#">
+              <div class="main-nav__icon">
+                <svg class="icon icon--search" width="19" height="18">
+                  <use xlink:href="../img/sprite.svg#icon-search"></use>
+                </svg>
+              </div>
+              Поиск по сайту
+            </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--cart" href="#">Корзина: <span class="main-nav__cart-status">пока пуста</span></a>
+            <a class="main-nav__link main-nav__link--cart" href="#">
+              <div class="main-nav__icon">
+                <svg class="icon icon--cart" width="20" height="19">
+                  <use xlink:href="../img/sprite.svg#icon-cart"></use>
+                </svg>
+              </div>
+              Корзина: <span class="main-nav__cart-status">пока пуста</span>
+            </a>
           </li>
         </ul>
       </nav>
     </header>
-    <main>
-      
+    <main class="page-form">
+      <div class="page-form__slogan">
+        <h2 class="page-form__title">Вязание на заказ</h2>
+        <p class="page-form__appeal">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      </div>
+      <form method="post" action="#" id="form-order" name="form-order" class="form-order">
+        <ul class="form-order__set">
+          <li>
+            <h3 class="form-order__legend">Тип</h3>
+          </li>
+          <li class="form-order__item">
+            <label class="form-order__type">
+              <input type="radio" name="form-order__type" class="form-order__input-radio visually-hidden">
+              <span class="form-order__radio"></span><span class="form-order__text">Аксессуар для<br/> интерьера</span>
+            </label>
+          </li>
+          <li class="form-order__item">
+            <label class="form-order__type">
+              <input type="radio" name="form-order__type" class="form-order__input-radio visually-hidden">
+              <span class="form-order__radio"></span>Детская игрушка
+            </label>
+          </li>
+        </ul>
+        <ul class="form-order__set">
+          <li class="form-order__legend-line">
+            <h3 class="form-order__legend">Цвет</h3><span class="form-order__line"></span>
+          </li>
+          <li class="form-order__item">
+            <label class="form-order__color">
+              <input type="checkbox" name="form-order__color" class="form-order__input-check visually-hidden">
+              <span class="form-order__checkbox"></span>Белый
+            </label>
+          </li>
+          <li class="form-order__item">
+            <label class="form-order__color">
+              <input type="checkbox" name="form-order__color" class="form-order__input-check visually-hidden">
+              <span class="form-order__checkbox"></span>Серый
+            </label>
+          </li>
+          <li class="form-order__item">
+            <label class="form-order__color">
+              <input type="checkbox" name="form-order__color" class="form-order__input-check visually-hidden">
+              <span class="form-order__checkbox"></span>«Тиффани»
+            </label>
+          </li>
+          <li class="form-order__item">
+            <label class="form-order__color">
+              <input type="checkbox" name="form-order__color" class="form-order__input-check visually-hidden">
+              <span class="form-order__checkbox"></span>Черный
+            </label>
+          </li>
+          <li class="form-order__item">
+            <label class="form-order__color">
+              <input type="checkbox" name="form-order__color" class="form-order__input-check visually-hidden">
+              <span class="form-order__checkbox"></span>Розовый
+            </label>
+          </li>
+          <li class="form-order__item">
+            <label class="form-order__color">
+              <input type="checkbox" name="form-order__color" class="form-order__input-check visually-hidden">
+              <span class="form-order__checkbox"></span>Оранжевый
+            </label>
+          </li>
+        </ul>
+        <ul class="form-order__set form-order__set--name">
+          <li class="form-order__legend-line">
+            <h3 class="form-order__legend">ФИО</h3>
+          </li>
+          <li class="form-order__block">
+            <label for="first_name" class="form-order__name">Имя:</label>
+            <input type="text" id="first_name" name="name" maxlength="30" placeholder="Введите ваше имя*" class="form-order__field">
+          </li>
+          <li class="form-order__block">
+            <label for="second-name" class="form-order__name">Фамилия:</label>
+            <input type="text" id="second-name" name="second-name" maxlength="30" placeholder="Укажите фамилию*" class="form-order__field">
+          </li>
+          <li class="form-order__block">
+            <label for="third-name" class="form-order__name">Отчество:</label>
+            <input type="text" id="third-name" name="patronymic" maxlength="30" placeholder="Отчество, если желаете" class="form-order__field">
+          </li>
+        </ul>
+        <ul class="form-order__set form-order__set--contact">
+          <li class="form-order__block form-order__block--icon">
+            <label for="phone" class="form-order__legend form-order__legend--phone">Тел</label>
+            <input type="tel" id=phone" name="number-phone" maxlength="15" placeholder="+7 XXX XX XX*" class="form-order__field form-order__field--phone">
+            <svg class="form-order__icon form-order__icon--phone" width="25" height="24">
+              <use xlink:href="../img/sprite.svg#icon-phone"></use>
+            </svg>
+          </li>
+          <li class="form-order__block form-order__block--icon"> 
+            <label for="email" class="form-order__legend form-order__legend--email">e-mail</label>
+            <input type="email" id="email" name="e-mail" maxlength="30" placeholder="Ваш Email*" class="form-order__field form-order__field--email">
+            <svg class="form-order__icon form-order__icon--email" width="32" height="32">
+              <use xlink:href="../img/sprite.svg#icon-email"></use>
+            </svg>
+          </li>
+          <li class="form-order__block">
+            <label for="add" class="form-order__legend form-order__legend--textarea">Доп</label>
+            <textarea rows="5" id="add" name="additional" placeholder="Опишите все ваши пожелания к заказу" class="form-order__textarea"></textarea>
+          </li>
+        </ul>
+        <p class="form-order__remark">*Поля обязательные для заполнения</p>
+        <input class="form-order__submit button" type="submit" id="submit_form-order" name="submit_form-order" value="Отправить заказ">
+      </form>
     </main>
     <footer class="page-footer">
-      <ul class="page-footer__social-networks">
-        <li class="page-footer__social-item page-footer__instagram">
-          <a href="#"><img src="img/icon-instagram.png" alt=""></a>
+      <ul class="page-footer__socials">
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link" href="#">
+            <svg class="page-footer__icon icon-instagram" width="28" height="21">
+              <use xlink:href="../img/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
         </li>
-        <li class="page-footer__social-item page-footer__facebook">
-          <a href="#"><img src="img/icon-facebook.png" alt=""></a>
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link" href="#">
+            <svg class="page-footer__icon icon-facebook" width="15" height="28">
+              <use xlink:href="../img/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
         </li>
-        <li class="page-footer__social-item page-footer__twitter">
-          <a href="#"><img src="img/icon-twitter.png" alt=""></a>
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link" href="#">
+            <svg class="page-footer__icon icon-twitter" width="23" height="20">
+              <use xlink:href="../img/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
         </li>
       </ul>
       <div class="page-footer__copyright">
-        <a class="page-footer__link-copyright" href="#"><span>Разработано</span>
-          <img src="img/icon-copyright.png" alt="">
+        <a class="page-footer__link-copyright" href="#">Разработано
+          <svg class="page-footer__academy" width="27" height="34">
+            <use xlink:href="../img/sprite.svg#icon-academy"></use>
+          </svg>
         </a>
       </div>
     </footer>

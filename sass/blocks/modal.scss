@@ -1,0 +1,126 @@
+//modal window
+.modal {
+  display: none;
+}
+
+.modal__show {
+  display: block;
+}
+
+.modal__overlay {
+  position  : fixed;
+  top       : 0;
+  left      : 0;
+  width     : 100%;
+  height    : 100vh;
+
+  opacity   : .9;
+  background: $base-background;
+  z-index   : 4;
+}
+
+.modal__products {
+  padding      : 0 9%;
+
+  position     : fixed;
+  top          : 50vh;
+  box-sizing   : border-box;
+  width        : 100%;
+
+  transform    : translateY(-50%);
+
+  border-top   : $border-gray;
+  border-bottom: $border-gray;
+  background   : $base-background;
+  box-shadow   : 0 5px 10px hsla(0, 0%, 0%, .25);
+  z-index      : 5;
+}
+
+.modal__title {
+  margin        : 37px-7 0 30px-10;
+
+  font-family   : "Open Sans Bold", sans-serif;
+  font-size     : 25px;
+  line-height   : 30px;
+
+  text-align    : center;
+  text-transform: uppercase;
+}
+
+.modal__text {
+  margin-bottom: 30px;
+
+  font-size    : 14px;
+  line-height  : 16px;
+
+  text-align   : center;
+}
+
+.modal__list {
+  margin-bottom  : 30px;
+  padding        : 0;
+
+  display        : flex;
+  flex-direction : row;
+
+  list-style     : none;
+
+  justify-content: space-between;
+}
+
+.modal__item {
+  position  : relative;
+  min-width : 30%;
+  min-height: 52px;
+
+  flex-grow : 1;
+
+  &:nth-child(2) {
+    margin: 0 10px;
+  }
+}
+
+.modal__size {
+  padding       : 16px 0;
+
+  position      : absolute;
+  top           : 0;
+  left          : 0;
+  box-sizing    : border-box;
+  width         : 100%;
+
+  font-family   : "Open Sans Bold", sans-serif;
+  font-size     : 17px;
+  line-height   : 16px;
+
+  text-align    : center;
+  text-transform: uppercase;
+
+  border        : 2px solid $gray-line;
+  background    : transparent;
+
+  &:hover {
+    border-color: $modal-hover;
+  }
+}
+
+//input type="radio
+
+.modal__radio:checked + .modal__size {
+  color           : $base-text;
+  border-color    : $text-remark;
+  background-color: $base-background;
+}
+
+.modal__radio:focus + .modal__size {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.modal__submit {
+  margin-bottom   : 46px+1;
+
+  color           : $button-text;
+  border-color    : $text-remark;
+  background-color: $text-remark;
+}

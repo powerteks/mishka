@@ -4,6 +4,7 @@
 
 .short-about__title {
   margin     : 35px-8 0 31px;
+
   font-family: "Open Sans Bold", sans-serif;
   font-size  : 25px;
   line-height: 30px;
@@ -12,47 +13,30 @@
 .short-about__list {
   margin    : 0;
   padding   : 0;
+
   list-style: none;
 }
 
 .short-about__advantages {
   margin     : 12px 0 28px;
-  padding-top: 55px;
+  padding-top: 3px;
+
   font-family: "Open Sans Bold", sans-serif;
   font-size  : 17px;
   line-height: 20px;
 }
 
-.short-about__advantages--flower {
-  background: url(../img/flower.png) 8px 1px no-repeat;
-}
+.short-about__icon {
+  margin-left: -3px;
 
-.short-about__advantages--money {
-  background: url(../img/money.png) 0px 2px no-repeat;
-}
+  display    : flex;
 
-.short-about__advantages--heart {
-  background: url(../img/heart.png) 7px 7px no-repeat;
-}
+  width      : 60px;
+  height     : 40px;
 
-.short-about__advantages--ball {
-  background: url(../img/ball.png) 3px 4px no-repeat;
-}
+  & .icon {
+    margin: auto;
 
-.short-about__advantages--rocket {
-  position: relative;
-
-  &::before {
-    position        : absolute;
-    content         : "";
-    top             : 5px;
-    left            : -6px;
-    width           : 55px;
-    height          : 23px;
-    background-image: url(../img/rocket.png);
+    fill: $text-remark;
   }
-}
-
-.short-about__advantages--box {
-  background: url(../img/box.png) 3px 3px no-repeat;
 }

@@ -1,9 +1,9 @@
 body {
   margin     : 0;
-  
+
   font-family: "Open Sans", sans-serif;
   font-style : normal;
-  
+
   color      : $base-text;
 }
 
@@ -13,48 +13,56 @@ body {
   width    : 100%;
 }
 
+.visually-hidden:checked,
+.visually-hidden:not(checked),
 .visually-hidden:not(:focus):not(:active) {
   margin     : -1px;
   padding    : 0;
-  
+
   overflow   : hidden;
   clip       : rect(0 0 0 0);
-  clip-path  : inset(100%);
-  
+
   position   : absolute;
   width      : 1px;
   height     : 1px;
-  
+
   white-space: nowrap;
-  
-  border     : 0;
+
+  border     : none;
+
+  clip-path  : inset(100%);
 }
 
 .button {
-  padding       : 20px-2-4 0 20px-2-4;
+  padding       : 20px-2-5 0 20px-2-3;
+
+  box-sizing    : border-box;
   width         : 100%;
+
   font-family   : "Open Sans Bold", sans-serif;
-  font-size     : 17px;
+  font-size     : 18px;
   line-height   : 20px;
-  border        : 2px solid hsl(0, 0%, 0%);
-  background    : transparent;
+
   text-align    : center;
   text-transform: uppercase;
-  box-sizing    : border-box;
+
+  border        : 2px solid hsl(0, 0%, 0%);
+  background    : transparent;
 
   &:hover {
-    color: $button-text;
+    color     : $button-text;
+    border    : 2px solid $button-hover;
     background: $button-hover;
-    border: 2px solid $button-hover;
   }
 
   &:active span {
     opacity: .3;
   }
-
 }
 
 .border {
-  height: 6px;
-  background-image: url(../img/border.png);
+  width           : 100%;
+  height          : 6px;
+  
+  background-image: url(../img/border.svg);
 }

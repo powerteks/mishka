@@ -1,17 +1,18 @@
 .page-main__slogan {
-  padding   : 30px;
+  padding   : 20px;
+  min-height: 242px;
 
-  background: $second-background url(../img/mishka_slogan-background_mobile.jpg) top -17px-2 center no-repeat;
+  background: $slogan-background url(../img/mishka_slogan-background_mobile.jpg) top -17px-2 center no-repeat;
 }
 
 .page-main__title {
-  margin-top    : 76px-30-7;
-  padding-bottom: 120px-48;
+  margin-top    : 76px-30+3;
+  padding-bottom: 120px-42;
   
-  font-family: "Open Sans Bold", sans-serif;
-  font-size  : 27px;
-  line-height: 31px;
-
+  font-family   : "Open Sans Bold", sans-serif;
+  font-size     : 27px;
+  line-height   : 31px;
+  
   text-align    : center;
   letter-spacing: .2px;
 }

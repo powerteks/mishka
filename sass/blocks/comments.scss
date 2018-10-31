@@ -1,6 +1,6 @@
 .comments {
   margin-top   : 63px-8;
-  padding      : 0 9% 0;
+  padding      : 0 9% 45px;
 }
 
 .comments__title {
@@ -12,6 +12,7 @@
 .comments__slider {
   margin    : 0;
   padding   : 0;
+
   list-style: none;
 }
 
@@ -25,60 +26,95 @@
 
 .comments__text {
   margin     : 24px 0;
+
   font-size  : 15px;
   line-height: 30px;
 }
 
 .comments__author {
-  margin-top: 40px-6-5;
-  display: block;
+  margin-top : 40px-6-5;
+  
+  display    : block;
+  
   font-family: "Open Sans Bold", sans-serif;
   font-size  : 17px;
   line-height: 20px;
 }
 
 .comments__login {
-  margin: 8px 0 13px;
-  display: block;
+  margin   : 8px 0 13px;
+  
+  display  : block;
+  
   font-size: 17px;
 }
 
 .comments__control {
-  margin: 36px-3 0 38px;
-  display: flex;
+  margin        : 36px-3 0 38px;
+  
+  display       : flex;
   flex-direction: row;
 }
 
 .comments__button {
-  padding   : 12px 0;
-  width     : 50%;
-  border    : $border-gray;
+  padding   : 23px 0;
+
   box-sizing: border-box;
+  width     : 50%;
+
+  border    : $border-gray;
   background: transparent;
 
-  &:hover {
+  &:hover .comments__arrow {
+    opacity: .6;
+  }
 
+  &:active .comments__arrow {
+    opacity: .3;
   }
 }
 
 .comments__arrow {
-  display: block;
-  margin : 0 auto;
+  margin    : 0 auto;
+
+  position  : relative;
+  width     : 48px;
+  height    : 4px;
+
+  background: hsl(0, 0%, 0%);
+
+  &::before,
+  &::after {
+    content   : "";
+
+    position  : absolute;
+    top       : 6px;
+    left      : -4px;
+    width     : 20px;
+    height    : 4px;
+
+    transform : rotate(45deg);
+
+    background: hsl(0, 0%, 0%);
+  }
+
+  &:after {
+    top: -5px;
+
+    transform: rotate(-45deg);
+  }
 }
 
 .comments__button--next {
-  border-right: none;
   transform   : rotate(180deg);
+
+  border-right: none;
 }
 
 .comments__button-write {
   display        : block;
-  color          : $base-text;
-  text-decoration: none;
-}
 
-.comments__border {
-  margin-top: 45px;
-  margin-left: -9%;
-  width: 100vw;
+  text-decoration: none;
+
+  color          : $base-text;
 }
