@@ -1,0 +1,15 @@
+@mixin font ($size, $height) {
+  font-size  : $size;
+  line-height: $height;
+}
+
+@mixin font-b ($size, $height) {
+  font-size  : $size;
+  font-weight: bold;
+  line-height: $height;
+}
+
+@mixin reset {
+  margin : 0;
+  padding: 0;
+}

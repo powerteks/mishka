@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
   <body>
-    <header class="page__header">
+    <header class="page-header">
       <nav class="main-nav main-nav--closed main-nav--no-js">
         <button class="main-nav__button-toggle">
           <span class="visually-hidden">Mеню</span>
@@ -30,7 +30,7 @@
           <li class="main-nav__item">
             <a class="main-nav__link main-nav__link--search" href="#">
               <div class="main-nav__icon">
-                <svg class="icon icon--search" width="19" height="18">
+                <svg class="main-nav__icon--search" width="19" height="18">
                   <use xlink:href="../img/sprite.svg#icon-search"></use>
                 </svg>
               </div>
@@ -40,7 +40,7 @@
           <li class="main-nav__item">
             <a class="main-nav__link main-nav__link--cart" href="#">
               <div class="main-nav__icon">
-                <svg class="icon icon--cart" width="20" height="19">
+                <svg class="main-nav__icon--cart" width="20" height="19">
                   <use xlink:href="../img/sprite.svg#icon-cart"></use>
                 </svg>
               </div>
@@ -49,29 +49,27 @@
           </li>
         </ul>
       </nav>
+      <div class="page-header__slogan page-header__slogan--main">
+        <h2 class="page-header__title">Милые&nbsp;штуки ручной работы&nbsp;для&nbsp;дома</h2>
+      </div>
     </header>
     <main class="page-main">
-      <div class="page-main__slogan">
-        <h2 class="page-main__title">Милые штуки ручной <br/>работы для дома</h2>
-      </div>
       <section class="main-products">
-        <input class="main-products__toggle" type="radio" name="toggle" id="main-interior" checked>
-        <input class="main-products__toggle" type="radio" name="toggle" id="main-toy">
-        <label class="main-products__item main-products__item--interior" for="main-interior">
+        <a class="main-products__link" href="#">
           <span>Предметы интерьера</span>
-          <svg class="main-products__icon icon-interior" width="40" height="60">
+          <svg class="main-products__icon icon-interior" width="40" height="62">
             <use xlink:href="../img/sprite.svg#icon-interior"></use>
           </svg>
-        </label>
-        <label class="main-products__item main-products__item--toys" for="main-toy">
+        </a>
+        <a class="main-products__link main-products__link--right" href="#">
           <span>Детские игрушки</span>
           <svg class="main-products__icon icon-toy" width="60" height="60">
             <use xlink:href="../img/sprite.svg#icon-toy"></use>
           </svg>
-        </label>
+        </a>
         <ul class="product-card product-card--interior">
           <li>
-            <h2 class="product-card__name">Вязаные корзинки</h2>
+            <h3 class="product-card__name">Вязаные корзинки</h3>
           </li>
           <li class="product-card__remark">Товар недели</li>
           <li class="product-card__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</li>
@@ -92,130 +90,70 @@
             </table>
           </li>
           <li>
-            <img class="product-card__photo" src="img/knitted-baskets.jpg">
+            <img class="product-card__photo image" src="img/knitted-baskets_mobile.jpg" alt="Вязаные корзинки">
           </li>
           <li class="product-card__price">Цена: <span>990</span> руб.</li>
-          <li>
-            <button class="product-card__buy button" type="button"><span>Заказать</span></button>
-          </li>
-        </ul>
-        <ul class="product-card product-card--toy">
-          <li>
-            <h2 class="product-card__name">Пухляш</h2>
-          </li>
-          <li class="product-card__remark"></li>
-          <li class="product-card__description"></li>
-          <li>
-            <table class="product-card__list">
-              <tr class="product-card__line">
-                <td class="product-card__name-property"></td>
-                <td class="product-card__property"></td>
-              </tr>
-              <tr class="product-card__line">
-                <td class="product-card__name-property"></td>
-                <td class="product-card__property"></td>
-              </tr>
-              <tr class="product-card__line">
-                <td class="product-card__name-property"></td>
-                <td class="product-card__property"></td>
-              </tr>
-            </table>
-          </li>
-          <li>
-            <img class="product-card__photo src="">
-          </li>
-          <li class="product-card__price"><span></span></li>
           <li>
             <a class="product-card__buy button" href="#">Заказать</a>
           </li>
         </ul>
       </section>
-      <section class="modal">
-        <div class="modal__products">
-          <form method="post" action="#" id="modal-size" name="modal-size" class="modal__form">
-            <h2 class="modal__title">Добавить <br/>в корзину</h2>
-            <p class="modal__text">Выберите размер:</p>
-            <ul class="modal__list">
-              <li class="modal__item">
-                <label>
-                  <input type="radio" id="size_s" name="size_selection" class="modal__radio visually-hidden">
-                  <span class="modal__size">s</span>
-                </label>
-              </li>
-              <li class="modal__item">
-                <label>
-                  <input type="radio" id="size_m" name="size_selection" class="modal__radio visually-hidden">
-                  <span class="modal__size">m</span>
-                </label>
-              </li>
-              <li class="modal__item">
-                <label>
-                  <input type="radio" id="size_l" name="size_selection" class="modal__radio visually-hidden">
-                  <span class="modal__size">l</span>
-                </label>
-              </li>
-            </ul>
-            <input type="submit" id="add_size" name="add_size" value="Добавить" class="modal__submit button">
-          </form>
-        </div>
-        <div class="modal__overlay"></div>
-      </section>
       <div class="main-products__border border"></div>
       <section class="short-about">
-        <h2 class="short-about__title">Коротко о нас:</h2>
+        <h3 class="short-about__title">Коротко о нас:</h3>
         <ul class="short-about__list">
           <li class="short-about__item">
-            <div class="short-about__icon">
-              <svg class="icon icon-flower" width="32" height="37">
+            <div class="short-about__icon-wrapper">
+              <svg class="short-about__icon" width="32" height="37">
                 <use xlink:href="../img/sprite.svg#icon-flower"></use>
               </svg>
             </div>
-            <p class="short-about__advantages short-about__advantages--flower">Экологически <br/>чистые материалы</p>
+            <p class="short-about__advantages">Экологически чистые&nbsp;материалы</p>
           </li>
           <li class="short-about__item">
-            <div class="short-about__icon">
-              <svg class="icon icon-money" width="47" height="27">
+            <div class="short-about__icon-wrapper">
+              <svg class="short-about__icon" width="47" height="27">
                 <use xlink:href="../img/sprite.svg#icon-money"></use>
               </svg>
             </div>
-            <p class="short-about__advantages short-about__advantages--money">Скандинавский стиль <br/>по российской цене</p>
+            <p class="short-about__advantages">Скандинавский стиль по&nbsp;российской&nbsp;цене</p>
           </li>
           <li class="short-about__item">
-            <div class="short-about__icon">
-              <svg class="icon icon-heart" width="33" height="28">
+            <div class="short-about__icon-wrapper">
+              <svg class="short-about__icon" width="33" height="28">
                 <use xlink:href="../img/sprite.svg#icon-heart"></use>
               </svg>
             </div>
-            <p class="short-about__advantages short-about__advantages--heart">Увеличивает лайки <br/>на фотографиях</p>
+            <p class="short-about__advantages">Увеличивает лайки на&nbsp;фотографиях</p>
           </li>
           <li class="short-about__item">
-            <div class="short-about__icon">
-              <svg class="icon icon-ball" width="34" height="34">
+            <div class="short-about__icon-wrapper">
+              <svg class="short-about__icon" width="34" height="34">
                 <use xlink:href="../img/sprite.svg#icon-ball"></use>
               </svg>
             </div>
-            <p class="short-about__advantages short-about__advantages--ball">Связано вручную с <br/>любовью и умилением</p>
+            <p class="short-about__advantages">Связано вручную с любовью&nbsp;и&nbsp;умилением</p>
           </li>
           <li class="short-about__item">
-            <div class="short-about__icon">
-              <svg class="icon icon-rocket" width="54" height="23">
+            <div class="short-about__icon-wrapper">
+              <svg class="short-about__icon" width="54" height="23">
                 <use xlink:href="../img/sprite.svg#icon-rocket"></use>
               </svg>
             </div>
-            <p class="short-about__advantages short-about__advantages--rocket">Поддержка отечественного <br/>производителя</p>
+            <p class="short-about__advantages">Поддержка отечественного производителя</p>
           </li>
           <li class="short-about__item">
-            <div class="short-about__icon">
-              <svg class="icon icon-box" width="35" height="35">
+            <div class="short-about__icon-wrapper">
+              <svg class="short-about__icon" width="33" height="32">
                 <use xlink:href="../img/sprite.svg#icon-box"></use>
               </svg>
             </div>
-            <p class="short-about__advantages short-about__advantages--box">Поставляется в <br/>подарочной упаковке</p>
+            <p class="short-about__advantages">Поставляется в подарочной&nbsp;упаковке</p>
           </li>
         </ul>
       </section>
       <section class="comments">
-        <h2 class="comments__title">Отзывы</h2>
+        <h3 class="comments__title">Отзывы</h3>
         <ul class="comments__slider">
           <li class="comments__item comments__item-show">
             <p class="comments__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
@@ -245,30 +183,62 @@
       </section>  
       <div class="comments__border border"></div>
       <section class="contacts">
-        <div class="contacts__title">Контакты</div>
-        <table class="contacts__list">
-          <tr class="contacts__line contacts__email">
-            <td class="contacts__name">e-mail:</td>
-            <td class="contacts__info">
-              <a class="contacts__email-link" href="#">info@mimimishkashop.ru</a>
-            </td>
-          </tr>
-          <tr class="contacts__line contacts__address">
-            <td class="contacts__name">адрес:</td>
-            <td class="contacts__info">г. Санкт-Петербург, <br/>ул. Большая Конюшенная, <br/>д. 19/8, офис 101</td>
-          </tr>
-        </table>
+        <div class="contacts__wrapper">
+          <h3 class="contacts__title">Контакты</h3>
+          <table class="contacts__list">
+            <tr class="contacts__line contacts__email">
+              <td class="contacts__name">e-mail:</td>
+              <td class="contacts__info">
+                <a class="contacts__email-link" href="#">info@mimimishkashop.ru</a>
+              </td>
+            </tr>
+            <tr class="contacts__line contacts__address">
+              <td class="contacts__name">адрес:</td>
+              <td class="contacts__info">г. Санкт-Петербург, <br/>ул. Большая Конюшенная, <br/>д. 19/8, офис 101</td>
+            </tr>
+          </table>
+        </div>
         <div class="contacts__wrapper-map">
           <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aedd58cfa11bff1d8a5924b9e9b00afe0e49b15dbf8140b7b2dd8a01c3d998474&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
         </div>
         <a class="contacts__button-write button" href="#">Напишите нам</a>
+      </section>
+      <section class="modal">
+        <div class="modal__products">
+          <form method="post" action="#" id="modal-size" name="modal-size" class="modal__form">
+            <h3 class="modal__title">Добавить в&nbsp;корзину</h3>
+            <p class="modal__text">Выберите размер:</p>
+            <ul class="modal__list">
+              <li class="modal__item">
+                <label>
+                  <input type="radio" id="size_s" name="size_selection" class="modal__radio visually-hidden">
+                  <span class="modal__size">s</span>
+                </label>
+              </li>
+              <li class="modal__item">
+                <label>
+                  <input type="radio" id="size_m" name="size_selection" class="modal__radio visually-hidden">
+                  <span class="modal__size">m</span>
+                </label>
+              </li>
+              <li class="modal__item">
+                <label>
+                  <input type="radio" id="size_l" name="size_selection" class="modal__radio visually-hidden">
+                  <span class="modal__size">l</span>
+                </label>
+              </li>
+            </ul>
+            <input type="submit" id="add_size" name="add_size" value="Добавить" class="modal__submit button">
+          </form>
+        </div>
+        <div class="modal__overlay"></div>
       </section>
     </main>
     <footer class="page-footer">
       <ul class="page-footer__socials">
         <li class="page-footer__social-item">
           <a class="page-footer__social-link" href="#">
-            <svg class="page-footer__icon icon-instagram" width="28" height="21">
+            <svg class="page-footer__icon page-footer__icon--instagram" width="28" height="21">
               <use xlink:href="../img/sprite.svg#icon-instagram"></use>
             </svg>
           </a>
@@ -289,7 +259,7 @@
         </li>
       </ul>
       <div class="page-footer__copyright">
-        <a class="page-footer__link-copyright" href="#">Разработано
+        <a class="page-footer__copyright-link" href="#">Разработано
           <svg class="page-footer__academy" width="27" height="34">
             <use xlink:href="../img/sprite.svg#icon-academy"></use>
           </svg>

@@ -1,35 +1,29 @@
 .product-card {
   margin        : 0;
-  padding       : 0 9%;
+  padding       : 0 $indent-mobile;
 
-  display       : none;
   flex-direction: column;
 
   list-style    : none;
-
-  font-family   : "Open Sans", sans-serif;
 
   color         : $base-text;
 }
 
 .product-card__name {
+  @include font-b(25px, 29px);
+
   margin-top   : 34px-6;
   margin-bottom: 0;
-
-  font-family  : "Open Sans Bold", sans-serif;
-  font-size    : 25px;
-  line-height  : 29px;
 }
 
 .product-card__remark {
   margin-top    : 14px-6-4;
-
-  font-family   : "Open Sans Bold", sans-serif;
-  font-size     : 17px;
-  line-height   : 21px;
-
+  
+  font-weight   : bold;
+  letter-spacing: 0;
+  
   text-transform: uppercase;
-
+  
   color         : $text-remark;
 }
 
@@ -41,15 +35,14 @@
 }
 
 .product-card__list {
+  @include font(15px, 19px);
+
   margin-bottom  : 28px;
   padding        : 0;
 
   width          : 100%;
 
   border-collapse: collapse;
-
-  font-size      : 15px;
-  line-height    : 19px;
 
   & td {
     padding: 0;
@@ -62,7 +55,7 @@
   display       : flex;
   flex-direction: row;
 
-  border-bottom : $border-gray;
+  border-bottom : $border-line;
 }
 
 .product-card__name-property {
@@ -76,25 +69,17 @@
 .product-card__photo {
   margin : 0 auto;
 
-  display: block;
-
   width  : 260px;
-  height : 315px;
 }
 
 .product-card__price {
-  margin     : 28px-4 auto 28px-2;
+  margin     : 28px-3 auto 28px;
 
-  font-family: "Open Sans Bold", sans-serif;
-  font-size  : 17px;
-  line-height: 24px;
+  font-weight: bold;
 
   text-align : center;
 }
 
 .product-card__buy {
-  padding    : 14px 0 14px;
-
-  font-size  : 17px;
-  line-height: 20px;
+  padding    : 13px 0 15px;
 }

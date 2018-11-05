@@ -1,22 +1,9 @@
-.page-main__slogan {
-  padding   : 20px;
-  min-height: 242px;
-
-  background: $slogan-background url(../img/mishka_slogan-background_mobile.jpg) top -17px-2 center no-repeat;
-}
-
-.page-main__title {
-  margin-top    : 76px-30+3;
-  padding-bottom: 120px-42;
+.page-main__appeal {
+  margin     : 29px-7 $indent-mobile 30px-9;
+  padding    : 0;
   
-  font-family   : "Open Sans Bold", sans-serif;
-  font-size     : 27px;
-  line-height   : 31px;
+  font-size  : 13px;
+  line-height: 24px;
   
-  text-align    : center;
-  letter-spacing: .2px;
-}
-
-.main-products__card--opened ~ .product-card {
-  display: block;
+  color      : $base-text;
 }

@@ -1,17 +1,14 @@
 .comments {
   margin-top   : 63px-8;
-  padding      : 0 9% 45px;
+  padding      : 0 $indent-mobile 45px;
 }
 
 .comments__title {
-  font-family: "Open Sans Bold", sans-serif;
-  font-size  : 25px;
-  line-height: 30px;
+  @include font-b(25px, 30px);
 }
 
 .comments__slider {
-  margin    : 0;
-  padding   : 0;
+  @include reset;
 
   list-style: none;
 }
@@ -25,19 +22,17 @@
 }
 
 .comments__text {
-  margin     : 24px 0;
+  @include font(15px, 30px);
 
-  font-size  : 15px;
-  line-height: 30px;
+  margin     : 24px 0;
 }
 
 .comments__author {
-  margin-top : 40px-6-5;
+  margin-top : 40px-6-6;
   
   display    : block;
   
-  font-family: "Open Sans Bold", sans-serif;
-  font-size  : 17px;
+  font-weight: bold;
   line-height: 20px;
 }
 
@@ -45,12 +40,10 @@
   margin   : 8px 0 13px;
   
   display  : block;
-  
-  font-size: 17px;
 }
 
 .comments__control {
-  margin        : 36px-3 0 38px;
+  margin        : 36px-2 0 38px;
   
   display       : flex;
   flex-direction: row;
@@ -62,7 +55,7 @@
   box-sizing: border-box;
   width     : 50%;
 
-  border    : $border-gray;
+  border    : $border-line;
   background: transparent;
 
   &:hover .comments__arrow {
@@ -81,7 +74,7 @@
   width     : 48px;
   height    : 4px;
 
-  background: hsl(0, 0%, 0%);
+  background: $base-line;
 
   &::before,
   &::after {
@@ -95,7 +88,7 @@
 
     transform : rotate(45deg);
 
-    background: hsl(0, 0%, 0%);
+    background: $base-line;
   }
 
   &:after {
@@ -106,15 +99,7 @@
 }
 
 .comments__button--next {
-  transform   : rotate(180deg);
+  transform   : translateX(-3px) rotate(180deg);
 
   border-right: none;
-}
-
-.comments__button-write {
-  display        : block;
-
-  text-decoration: none;
-
-  color          : $base-text;
 }

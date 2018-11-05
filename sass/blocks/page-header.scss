@@ -1,0 +1,29 @@
+.page-header__slogan {
+  padding         : 20px $indent-mobile;
+  
+  overflow        : hidden;
+  
+  background-color: $second-background;
+}
+
+.page-header__slogan--main {
+  min-height : 242px;
+
+  background : hsl(0, 0%, 98%) url(../img/mishka_slogan-background_mobile.jpg) top -18px center no-repeat;
+
+  & .page-header__title {
+    margin-top : -19px;
+    padding-top: 69px;
+  }
+}
+
+.page-header__title {
+  @include font-b(27px, 30px);
+
+  margin     : 0 auto;
+  padding    : 75px-23-2 0 74px-23+5;
+
+  display    : block;
+
+  text-align : center;
+}

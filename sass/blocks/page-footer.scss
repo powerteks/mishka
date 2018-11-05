@@ -1,5 +1,5 @@
 .page-footer {
-  padding   : 0 6%;
+  padding   : 0 $indent-mobile;
 
   background: $second-background;
 }
@@ -7,14 +7,14 @@
 .page-footer__socials {
   margin         : 0;
   margin-left    : 8px;
-  padding        : 16px 0 11px;
+  padding        : 16px 0 12px;
 
   display        : flex;
   flex-direction : row;
 
   list-style     : none;
 
-  border-bottom  : $border-gray;
+  border-bottom  : $border-line;
 
   justify-content: center;
   align-items    : center;
@@ -38,7 +38,7 @@
   }
 }
 
-.icon-instagram {
+.page-footer__icon--instagram {
   margin-right: -1px;
   margin-left : -16px;
 }
@@ -49,13 +49,11 @@
   text-align: center;
 }
 
-.page-footer__link-copyright {
+.page-footer__copyright-link {
+  @include font-b(19px, 30px);
+
   display        : flex;
   flex-direction : row;
-
-  font-family    : "Open Sans Bold", sans-serif;
-  font-size      : 19px;
-  line-height    : 30px;
 
   text-decoration: none;
 

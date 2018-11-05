@@ -3,14 +3,10 @@
 }
 
 .main-nav__list {
-  margin     : 0;
-  padding    : 0;
+  @include font-b(17px, 21px)
+  @include reset;
 
   list-style : none;
-
-  font-family: "Open Sans Bold", sans-serif;
-  font-size  : 17px;
-  line-height: 21px;
 }
 
 .main-nav__link {
@@ -21,7 +17,7 @@
   text-decoration: none;
 
   color          : $base-text;
-  border-bottom  : $border-gray;
+  border-bottom  : $border-line;
 
   &[href]:hover {
     color: $link-hover;
@@ -57,8 +53,8 @@
     width           : 20px;
     height          : 2px;
 
-    background-color: hsl(0, 0%, 0%);
-    box-shadow      : 0 6px 0 0 hsl(0, 0%, 0%), 0 12px 0 0 hsl(0, 0%, 0%);
+    background-color: $base-line;
+    box-shadow      : 0 6px 0 0 $base-line, 0 12px 0 0 $base-line;
   }
 
   .main-nav--opened .main-nav__button-toggle::before,
@@ -71,11 +67,9 @@
     width           : 27px;
     height          : 2px;
 
-    background-color: hsl(0, 0%, 0%);
-  }
+    transform       : rotate(45deg);
 
-  .main-nav--opened .main-nav__button-toggle::before {
-    transform: rotate(45deg);
+    background-color: $base-line;
   }
 
   .main-nav--opened .main-nav__button-toggle::after {
@@ -101,8 +95,8 @@
 
   display         : block;
 
-  border-top      : $border-gray;
-  border-bottom   : $border-gray;
+  border-top      : $border-line;
+  border-bottom   : $border-line;
   background-color: $base-background;
 
   &[href]:hover {
@@ -131,8 +125,8 @@
   width   : 23.8%;
 }
 
-.icon--search,
-.icon--cart {
+.main-nav__icon--search,
+.main-nav__icon--cart {
   position: absolute;
   top     : -14px;
   right   : 18px;
@@ -140,16 +134,14 @@
   opacity : .2;
 }
 
-.main-nav__link--search:hover .icon--search,
-.main-nav__link--cart:hover .icon--cart {
+.main-nav__link--search:hover .main-nav__icon--search,
+.main-nav__link--cart:hover .main-nav__icon--cart {
   opacity: 1;
-
   fill   : $text-remark;
 }
 
-.main-nav__link--search:active .icon--search,
-.main-nav__link--cart:active .icon--cart {
+.main-nav__link--search:active .main-nav__icon--search,
+.main-nav__link--cart:active .main-nav__icon--cart {
   opacity: 1;
-
   fill   : $text-remark;
 }

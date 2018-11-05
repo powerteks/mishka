@@ -30,7 +30,7 @@
           <li class="main-nav__item">
             <a class="main-nav__link main-nav__link--search" href="#">
               <div class="main-nav__icon">
-                <svg class="icon icon--search" width="19" height="18">
+                <svg class="main-nav__icon--search" width="19" height="18">
                   <use xlink:href="../img/sprite.svg#icon-search"></use>
                 </svg>
               </div>
@@ -40,7 +40,7 @@
           <li class="main-nav__item">
             <a class="main-nav__link main-nav__link--cart" href="#">
               <div class="main-nav__icon">
-                <svg class="icon icon--cart" width="20" height="19">
+                <svg class="main-nav__icon--cart" width="20" height="19">
                   <use xlink:href="../img/sprite.svg#icon-cart"></use>
                 </svg>
               </div>
@@ -49,23 +49,147 @@
           </li>
         </ul>
       </nav>
+      <div class="page-header__slogan">
+        <h2 class="page-header__title">Каталог товаров</h2>
+      </div>
     </header>
-
+    <main class="page-main">
+      <section class="catalog">
+        <article class="catalog-item" tabindex="0">
+          <a href="#" class="catalog-item__description">
+            <picture>
+              <source>
+              <img class="image" src="img/toy-bunny_mobile.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
+            </picture>
+            <h3 class="catalog-item__name">Зайчик-попрыгайчик</h3>
+            <p class="catalog-item__specifications">
+              Рост 30 см, вес 200 г</p>
+          </a>
+          <a href="#" class="catalog-item__buy">
+            1 200 руб.
+            <svg class="catalog-item__buy-icon" width="20" height="19">
+              <use xlink:href="../img/sprite.svg#icon-cart"></use>
+            </svg>
+          </a>
+        </article>
+        <article class="catalog-item" tabindex="0">
+          <a href="#" class="catalog-item__description">
+            <picture>
+              <source>
+              <img class="image" src="img/laundry-basket_mobile.jpg" width="260" height="195" alt="Корзинка для белья">
+            </picture>
+            <h3 class="catalog-item__name">Корзинка для белья</h3>
+            <p class="catalog-item__specifications">
+              Диаметр 15 см, высота 10 см</p>
+          </a>
+          <a href="#" class="catalog-item__buy">
+            690 руб.
+            <svg class="catalog-item__buy-icon" width="20" height="19">
+              <use xlink:href="../img/sprite.svg#icon-cart"></use>
+            </svg>
+          </a>
+        </article>
+        <article class="catalog-item" tabindex="0">
+          <a href="#" class="catalog-item__description">
+            <picture>
+              <source>
+              <img class="image" src="img/basket-for-toys_mobile.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
+            </picture>
+            <h3 class="catalog-item__name">Большая корзинка для игрушек</h3>
+            <p class="catalog-item__specifications">
+              Диаметр 30 см, высота 30 см</p>
+          </a>
+          <a href="#" class="catalog-item__buy">
+            1 500 руб.
+            <svg class="catalog-item__buy-icon" width="20" height="19">
+              <use xlink:href="../img/sprite.svg#icon-cart"></use>
+            </svg>
+          </a>
+        </article>
+      </section>
+      <section class="making">
+        <h3 class="making__title">
+          <svg class="making__title-icon" width="32" height="32">
+              <use xlink:href="../img/sprite.svg#icon-camcorder"></use>
+            </svg>
+          Процесс производства
+        </h3>
+        <div class="making__player">
+          <picture>
+            <source>
+              <img class="image" src="img/making-player_mobile.jpg" width="260" height="150" alt="Видео о производстве">
+          </picture>
+          <button class="making__play">
+            <svg class="making__play-icon" width="101" height="77">
+              <use xlink:href="../img/sprite.svg#icon-play"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="making__description">
+          <p class="making__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a href="#" class="making__button button">Сделать заказ</a>
+        </div>
+      </section>
+      <section class="modal">
+        <div class="modal__products">
+          <form method="post" action="#" id="modal-size" name="modal-size" class="modal__form">
+            <h3 class="modal__title">Добавить в&nbsp;корзину</h3>
+            <p class="modal__text">Выберите размер:</p>
+            <ul class="modal__list">
+              <li class="modal__item">
+                <label>
+                  <input type="radio" id="size_s" name="size_selection" class="modal__radio visually-hidden">
+                  <span class="modal__size">s</span>
+                </label>
+              </li>
+              <li class="modal__item">
+                <label>
+                  <input type="radio" id="size_m" name="size_selection" class="modal__radio visually-hidden">
+                  <span class="modal__size">m</span>
+                </label>
+              </li>
+              <li class="modal__item">
+                <label>
+                  <input type="radio" id="size_l" name="size_selection" class="modal__radio visually-hidden">
+                  <span class="modal__size">l</span>
+                </label>
+              </li>
+            </ul>
+            <input type="submit" id="add_size" name="add_size" value="Добавить" class="modal__submit button">
+          </form>
+        </div>
+        <div class="modal__overlay"></div>
+      </section>
+    </main>
     <footer class="page-footer">
       <ul class="page-footer__socials">
-        <li class="page-footer__social-item page-footer__instagram">
-          <a href="#"><img src="img/icon-instagram.png" alt=""></a>
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link" href="#">
+            <svg class="page-footer__icon page-footer__icon--instagram" width="28" height="21">
+              <use xlink:href="../img/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
         </li>
-        <li class="page-footer__social-item page-footer__facebook">
-          <a href="#"><img src="img/icon-facebook.png" alt=""></a>
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link" href="#">
+            <svg class="page-footer__icon icon-facebook" width="15" height="28">
+              <use xlink:href="../img/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
         </li>
-        <li class="page-footer__social-item page-footer__twitter">
-          <a href="#"><img src="img/icon-twitter.png" alt=""></a>
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link" href="#">
+            <svg class="page-footer__icon icon-twitter" width="23" height="20">
+              <use xlink:href="../img/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
         </li>
       </ul>
       <div class="page-footer__copyright">
-        <a class="page-footer__link-copyright" href="#"><span>Разработано</span>
-          <img src="img/icon-copyright.png" alt="">
+        <a class="page-footer__copyright-link" href="#">Разработано
+          <svg class="page-footer__academy" width="27" height="34">
+            <use xlink:href="../img/sprite.svg#icon-academy"></use>
+          </svg>
         </a>
       </div>
     </footer>

@@ -1,0 +1,62 @@
+.making {
+  margin         : 28px+2 $indent-mobile 58px;
+
+  text-decoration: none;
+
+  color          : $base-text;
+  border         : $border-line;
+}
+
+.making__title {
+  @include font-b(17px, 24px);
+
+  margin     : 0 33px;
+  padding    : 29px-6 0 30px-5;
+
+  display    : flex;
+
+  align-items: center;
+}
+
+.making__title-icon {
+  margin-right: 28px-4;
+  
+  transform   : translateY(-2px);
+  
+  fill        : $text-remark;
+  
+  flex-shrink : 0;
+}
+
+.making__player {
+  position: relative;
+  width   : auto;
+}
+
+.making__play {
+  position        : absolute;
+  top             : 50%;
+  left            : 50%;
+
+  font-size       : 0;
+
+  cursor          : pointer;
+  transform       : translate(-50%, -50%);
+
+  border          : none;
+  background-color: transparent;
+  z-index         : 2;
+}
+
+.making__text {
+  @include font(13px, 24px)
+
+  margin : 0 33px;
+  padding: 34px-7 0 29px-4;
+}
+
+.making__button {
+  margin: 0 33px 32px;
+
+  width : auto;
+}

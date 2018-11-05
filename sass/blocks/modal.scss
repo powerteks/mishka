@@ -3,15 +3,17 @@
   display: none;
 }
 
-.modal__show {
+.modal--show {
   display: block;
 }
 
 .modal__overlay {
   position  : fixed;
   top       : 0;
+  right     : 0;
+  bottom    : 0;
   left      : 0;
-  width     : 100%;
+  width     : 100vh;
   height    : 100vh;
 
   opacity   : .9;
@@ -20,7 +22,7 @@
 }
 
 .modal__products {
-  padding      : 0 9%;
+  padding      : 0 9.4%;
 
   position     : fixed;
   top          : 50vh;
@@ -29,29 +31,26 @@
 
   transform    : translateY(-50%);
 
-  border-top   : $border-gray;
-  border-bottom: $border-gray;
+  border-top   : $border-line;
+  border-bottom: $border-line;
   background   : $base-background;
   box-shadow   : 0 5px 10px hsla(0, 0%, 0%, .25);
   z-index      : 5;
 }
 
 .modal__title {
-  margin        : 37px-7 0 30px-10;
+  @include font-b(25px, 30px);
 
-  font-family   : "Open Sans Bold", sans-serif;
-  font-size     : 25px;
-  line-height   : 30px;
+  margin        : 37px-7 0 30px-10;
 
   text-align    : center;
   text-transform: uppercase;
 }
 
 .modal__text {
-  margin-bottom: 30px;
+  @include font(14px, 16px);
 
-  font-size    : 14px;
-  line-height  : 16px;
+  margin-bottom: 30px;
 
   text-align   : center;
 }
@@ -81,6 +80,8 @@
 }
 
 .modal__size {
+  @include font-b(17px, 16px);
+
   padding       : 16px 0;
 
   position      : absolute;
@@ -89,10 +90,6 @@
   box-sizing    : border-box;
   width         : 100%;
 
-  font-family   : "Open Sans Bold", sans-serif;
-  font-size     : 17px;
-  line-height   : 16px;
-
   text-align    : center;
   text-transform: uppercase;
 
@@ -100,7 +97,7 @@
   background    : transparent;
 
   &:hover {
-    border-color: $modal-hover;
+    border-color: $form-active ;
   }
 }
 
@@ -120,7 +117,7 @@
 .modal__submit {
   margin-bottom   : 46px+1;
 
-  color           : $button-text;
+  color           : $button-text-hover;
   border-color    : $text-remark;
   background-color: $text-remark;
 }
