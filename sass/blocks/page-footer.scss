@@ -4,6 +4,10 @@
   background: $second-background;
 }
 
+.page-footer__logo {
+  display: none;
+}
+
 .page-footer__socials {
   margin         : 0;
   margin-left    : 8px;
@@ -44,7 +48,7 @@
 }
 
 .page-footer__copyright {
-  padding: 18px 0 24px;
+  padding: 18px-5 0 24px;
 
   text-align: center;
 }
@@ -76,4 +80,38 @@
   margin-left: 30px;
 
   fill       : $text-remark;
+}
+
+// For Tablet
+// --------------------------------------------------
+@media (min-width: $tablet-width) {
+  .page-footer {
+    padding        : 0 $indent-tablet;
+
+    display        : flex;
+
+    justify-content: space-between;
+    align-items    : center;
+  }
+
+  .page-footer__logo {
+    display: block;
+  }
+
+  .page-footer__logo,
+  .page-footer__copyright {
+    width: 30%;
+  }
+
+  .page-footer__socials {
+    padding: 49px 0 37px;
+  }
+
+  .page-footer__copyright {
+    padding-bottom: 13px;
+  }
+
+  .page-footer__copyright-link {
+    justify-content: flex-end;
+  }
 }

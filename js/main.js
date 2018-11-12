@@ -64,7 +64,7 @@ if (closeModal != null) {
   });
 }
 
-if (popupOverlay != null) {
+if (commSlide != null) {
   showSlide(slideIndex);
 
   commPrev.addEventListener('click', function(n) {

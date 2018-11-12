@@ -1,13 +1,7 @@
 .contacts__wrapper {
-  padding : 0 $indent-mobile;
+  margin  : 0 auto;
 
-  position: relative;
-}
-
-.contacts__title {
-  @include font-b(18px, 31px);
-
-  margin     : 44px-9 0 43px-18;
+  width   : $body-mobile;
 }
 
 .contacts__list {
@@ -15,10 +9,8 @@
 
   width          : 100%;
 
+  border-spacing : 0;
   border-collapse: collapse;
-
-  font-size      : 15px;
-  line-height    : 30px;
 
   & td {
     padding: 0;
@@ -33,11 +25,11 @@
 }
 
 .contacts__name {
-  width: 30%;
+  width: 29.6%;
 }
 
 .contacts__info {
-  width: 70%;
+  width: 70.4%;
 }
 
 .contacts__email-link {
@@ -69,24 +61,84 @@
 }
 
 .contacts__wrapper-map {
-  margin    : 7px 0 39px ;
+  margin: 7px 0 39px;
 
-  position  : relative;
-  min-height: 457px;
+  height: 457px;
 }
 
 .contacts__map {
-  position: absolute;
-  left    : 0;
-  width   : 100%;
-  height  : 457px;
+  width : 100%;
+  height: 457px;
 
-  border  : none;
-  z-index : 2;
+  border: none;
 }
 
 .contacts__button-write {
-  margin: 39px $indent-mobile;
+  margin: 39px auto;
 
-  width : 81.2%;
+  width : $body-mobile;
+}
+
+@media (max-width: $mobile-width) {
+  .contacts__title {
+    @include font-b(18px, 31px);
+
+    margin: 44px-9 0 43px-18 (-2px);
+  }
+
+  .contacts__title-flag {
+    display: none;
+  }
+}
+
+// For Tablet
+// --------------------------------------------------
+@media (min-width: $tablet-width) {
+  .contacts {
+    text-align: center;
+  }
+
+  .contacts__wrapper {
+    width: $body-tablet;
+  }
+
+  .contacts__title {
+    margin         : 46px 3px 33px -4px;
+
+    display        : flex;
+
+    justify-content: space-between;
+    align-items    : center;
+  }
+
+  .contacts__list tbody {
+    display: flex;
+
+    text-align: left;
+  }
+
+  .contacts__line {
+    width: 50%;
+  }
+
+  .contacts__name {
+    width: 23%;
+  }
+
+  .contacts__email-link::after {
+    bottom: -3px;
+  }
+
+  .contacts__wrapper-map {
+    margin: 26px 0 55px;
+  }
+
+  .contacts__button-write {
+    margin : 0 auto 57px;
+    padding: 14px 40px;
+
+    display: inline-block;
+
+    width  : auto;
+  }
 }

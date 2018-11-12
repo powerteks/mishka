@@ -1,5 +1,7 @@
 .making {
-  margin         : 28px+2 $indent-mobile 58px;
+  margin         : 28px+2 auto 58px;
+
+  width          : $body-mobile;
 
   text-decoration: none;
 
@@ -10,7 +12,7 @@
 .making__title {
   @include font-b(17px, 24px);
 
-  margin     : 0 33px;
+  margin     : 0 13%;
   padding    : 29px-6 0 30px-5;
 
   display    : flex;
@@ -20,17 +22,22 @@
 
 .making__title-icon {
   margin-right: 28px-4;
-  
-  transform   : translateY(-2px);
-  
+
+  transform   : translateY(-1px);
+
   fill        : $text-remark;
-  
+
   flex-shrink : 0;
 }
 
 .making__player {
   position: relative;
   width   : auto;
+}
+
+.making__image {
+  width : 260px;
+  height: 150px;
 }
 
 .making__play {
@@ -41,22 +48,125 @@
   font-size       : 0;
 
   cursor          : pointer;
+  transition      : .2s;
   transform       : translate(-50%, -50%);
 
   border          : none;
   background-color: transparent;
   z-index         : 2;
+
+  &:hover {
+    transition: .2s;
+    transform : scale(1.2, 1.2) translate(-41%, -41%);
+  }
+  &:active {
+    transition: .2s;
+    transform : scale(.8, .8) translate(-64%, -64%);
+    
+    opacity   : .3;
+  }
 }
 
 .making__text {
   @include font(13px, 24px)
 
-  margin : 0 33px;
-  padding: 34px-7 0 29px-4;
+  margin : 0 13%;
+  padding: 34px-8 0 29px-4;
 }
 
 .making__button {
-  margin: 0 33px 32px;
+  margin: 0 13% 32px;
 
   width : auto;
+}
+
+// For Tablet
+// --------------------------------------------------
+@media (min-width: $tablet-width) {
+  .making {
+    margin        : 0 auto 63px;
+
+    display       : flex;
+    flex-direction: column;
+
+    width         : $body-tablet;
+
+    border        : none;
+  }
+
+  .making__title {
+    margin       : 0;
+    padding      : 34px 41px 28px;
+
+    position     : relative;
+
+    font-size    : 20px;
+
+    border       : $border-line;
+    border-bottom: none;
+
+    order        : 2;
+
+    &::after {
+      content   : "";
+
+      position  : absolute;
+      right     : 0;
+      bottom    : -6px;
+      left      : 0;
+      height    : 6px;
+
+      background: $base-background;
+    }
+  }
+
+  .making__title-icon {
+    margin-right: 32px;
+  }
+
+  .making__description {
+    margin    : 0;
+    padding   : 0 41px 45px;
+
+    border    : $border-line;
+    border-top: none;
+
+    order     : 3;
+  }
+
+  .making__text {
+    margin     : 0;
+    padding    : 0 0 35px;
+
+    font-size  : 15px;
+    line-height: 30px;
+  }
+
+  .making__image {
+    width : 100%;
+    height: auto;
+  }
+
+  .making__button {
+    margin : 0;
+    padding: 14px 0 14px;
+  }
+
+  .making {
+    &:hover .making__title {
+      box-shadow: 0 0 10px $shadow-color;
+    }
+
+    &:hover .making__description {
+      box-shadow: 0 6px 10px $shadow-color;
+    }
+
+    &:active .making__title {
+      box-shadow: 0 0 5px $shadow-color;
+    }
+
+    &:active .making__description {
+      box-shadow: 0 3px 5px $shadow-color;
+    }
+  }
 }

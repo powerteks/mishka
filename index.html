@@ -13,94 +13,100 @@
           <span class="visually-hidden">Mеню</span>
         </button>
         <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__head">
-            <a class="main-nav__link main-nav__logo">
+          <li class="main-nav__item main-nav__logo">
+            <a class="main-nav__link main-nav__link--logo">
               <span class="visually-hidden">Главная</span>
-              <svg class="main-nav__logo--mobile" width="86" height="35">
-                <use xlink:href="../img/sprite.svg#logo__mobile"></use>
-              </svg>
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/logo_tablet.svg" type="image/svg+xml">
+                <img src="img/logo_mobile.svg"  width="86" height="35" alt="Мишка">
+              </picture>
             </a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__catalog">
             <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__order">
             <a class="main-nav__link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link main-nav__link--search" href="#">
-              <div class="main-nav__icon">
-                <svg class="main-nav__icon--search" width="19" height="18">
-                  <use xlink:href="../img/sprite.svg#icon-search"></use>
-                </svg>
-              </div>
+              <svg class="main-nav__icon main-nav__icon--search" width="19" height="18">
+                <use xlink:href="../img/sprite.svg#icon-search"></use>
+              </svg>
               Поиск по сайту
             </a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__cart">
             <a class="main-nav__link main-nav__link--cart" href="#">
-              <div class="main-nav__icon">
-                <svg class="main-nav__icon--cart" width="20" height="19">
-                  <use xlink:href="../img/sprite.svg#icon-cart"></use>
-                </svg>
-              </div>
-              Корзина: <span class="main-nav__cart-status">пока пуста</span>
+              <svg class="main-nav__icon main-nav__icon--cart" width="20" height="19">
+                <use xlink:href="../img/sprite.svg#icon-cart"></use>
+              </svg>
+              Корзина:&nbsp;<span class="main-nav__cart-status">пока&nbsp;пуста</span>
             </a>
+          </li>
+          <li class="main-nav__item main-nav__item--delivery">
+            <a class="main-nav__link" href="#">Бесплатная доставка по России</a>
           </li>
         </ul>
       </nav>
       <div class="page-header__slogan page-header__slogan--main">
-        <h2 class="page-header__title">Милые&nbsp;штуки ручной работы&nbsp;для&nbsp;дома</h2>
+        <h2 class="page-header__title page-header__title--main title">Милые&nbsp;штуки ручной работы&nbsp;для&nbsp;дома</h2>
       </div>
     </header>
     <main class="page-main">
-      <section class="main-products">
-        <a class="main-products__link" href="#">
-          <span>Предметы интерьера</span>
-          <svg class="main-products__icon icon-interior" width="40" height="62">
-            <use xlink:href="../img/sprite.svg#icon-interior"></use>
-          </svg>
-        </a>
-        <a class="main-products__link main-products__link--right" href="#">
-          <span>Детские игрушки</span>
-          <svg class="main-products__icon icon-toy" width="60" height="60">
-            <use xlink:href="../img/sprite.svg#icon-toy"></use>
-          </svg>
-        </a>
-        <ul class="product-card product-card--interior">
-          <li>
-            <h3 class="product-card__name">Вязаные корзинки</h3>
-          </li>
-          <li class="product-card__remark">Товар недели</li>
-          <li class="product-card__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</li>
-          <li>
-            <table class="product-card__list">
-              <tr class="product-card__line">
-                <td class="product-card__name-property">Цвет:</td>
-                <td class="product-card__property">«Тиффани»/серый</td>
-              </tr>
-              <tr class="product-card__line">
-                <td class="product-card__name-property">Диаметр:</td>
-                <td class="product-card__property">25 см</td>
-              </tr>
-              <tr class="product-card__line">
-                <td class="product-card__name-property">Высота:</td>
-                <td class="product-card__property">15 см</td>
-              </tr>
-            </table>
-          </li>
-          <li>
-            <img class="product-card__photo image" src="img/knitted-baskets_mobile.jpg" alt="Вязаные корзинки">
-          </li>
-          <li class="product-card__price">Цена: <span>990</span> руб.</li>
-          <li>
-            <a class="product-card__buy button" href="#">Заказать</a>
-          </li>
-        </ul>
+      <section class="products border">
+        <div class="products__wrapper border-white">
+          <a class="products__link" href="#">
+            <span>Предметы интерьера</span>
+            <svg class="products__icon products__icon--interior" width="40" height="62">
+              <use xlink:href="../img/sprite.svg#icon-interior"></use>
+            </svg>
+          </a>
+          <a class="products__link products__link--right" href="#">
+            <span>Детские игрушки</span>
+            <svg class="products__icon products__icon--toy" width="60" height="60">
+              <use xlink:href="../img/sprite.svg#icon-toy"></use>
+            </svg>
+          </a>
+        </div>
+        <article class="product-card">
+          <div class="product-card__header">
+            <h3 class="product-card__name title">Вязаные корзинки</h3>
+            <b class="product-card__remark">Товар недели</b>
+          </div>
+          <ul class="product-card__description">
+            <li class="product-card__item product-card__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</li>
+            <li class="product-card__item">
+              <table class="product-card__table">
+                <tr class="product-card__line">
+                  <td class="product-card__name-property">Цвет:</td>
+                  <td class="product-card__property">«Тиффани»/серый</td>
+                </tr>
+                <tr class="product-card__line">
+                  <td class="product-card__name-property">Диаметр:</td>
+                  <td class="product-card__property">25 см</td>
+                </tr>
+                <tr class="product-card__line">
+                  <td class="product-card__name-property">Высота:</td>
+                  <td class="product-card__property">15 см</td>
+                </tr>
+              </table>
+            </li>
+            <li class="product-card__item product-card__photo image">
+              <picture class="product-card__image">
+                <source media="(min-width: 768px)" srcset="img/knitted-baskets_tablet.jpg">
+                <img src="img/knitted-baskets_mobile.jpg" alt="Вязаные корзинки">
+              </picture>
+            </li>
+            <li class="product-card__item product-card__price">Цена: <span>990</span> руб.</li>
+            <li class="product-card__item">
+              <a class="product-card__buy button" href="#">Заказать</a>
+            </li>
+          </ul>
+        </article>
       </section>
-      <div class="main-products__border border"></div>
       <section class="short-about">
-        <h3 class="short-about__title">Коротко о нас:</h3>
+        <h3 class="short-about__title title">Коротко о нас:</h3>
         <ul class="short-about__list">
           <li class="short-about__item">
             <div class="short-about__icon-wrapper">
@@ -108,7 +114,7 @@
                 <use xlink:href="../img/sprite.svg#icon-flower"></use>
               </svg>
             </div>
-            <p class="short-about__advantages">Экологически чистые&nbsp;материалы</p>
+            <p class="short-about__text">Экологически чистые&nbsp;материалы</p>
           </li>
           <li class="short-about__item">
             <div class="short-about__icon-wrapper">
@@ -116,7 +122,7 @@
                 <use xlink:href="../img/sprite.svg#icon-money"></use>
               </svg>
             </div>
-            <p class="short-about__advantages">Скандинавский стиль по&nbsp;российской&nbsp;цене</p>
+            <p class="short-about__text">Скандинавский стиль по&nbsp;российской&nbsp;цене</p>
           </li>
           <li class="short-about__item">
             <div class="short-about__icon-wrapper">
@@ -124,7 +130,7 @@
                 <use xlink:href="../img/sprite.svg#icon-heart"></use>
               </svg>
             </div>
-            <p class="short-about__advantages">Увеличивает лайки на&nbsp;фотографиях</p>
+            <p class="short-about__text">Увеличивает лайки на&nbsp;фотографиях</p>
           </li>
           <li class="short-about__item">
             <div class="short-about__icon-wrapper">
@@ -132,7 +138,7 @@
                 <use xlink:href="../img/sprite.svg#icon-ball"></use>
               </svg>
             </div>
-            <p class="short-about__advantages">Связано вручную с любовью&nbsp;и&nbsp;умилением</p>
+            <p class="short-about__text">Связано вручную с любовью&nbsp;и&nbsp;умилением</p>
           </li>
           <li class="short-about__item">
             <div class="short-about__icon-wrapper">
@@ -140,7 +146,7 @@
                 <use xlink:href="../img/sprite.svg#icon-rocket"></use>
               </svg>
             </div>
-            <p class="short-about__advantages">Поддержка отечественного производителя</p>
+            <p class="short-about__text">Поддержка отечественного производителя</p>
           </li>
           <li class="short-about__item">
             <div class="short-about__icon-wrapper">
@@ -148,12 +154,12 @@
                 <use xlink:href="../img/sprite.svg#icon-box"></use>
               </svg>
             </div>
-            <p class="short-about__advantages">Поставляется в подарочной&nbsp;упаковке</p>
+            <p class="short-about__text">Поставляется в подарочной&nbsp;упаковке</p>
           </li>
         </ul>
       </section>
-      <section class="comments">
-        <h3 class="comments__title">Отзывы</h3>
+      <section class="comments border">
+        <h3 class="comments__title title">Отзывы</h3>
         <ul class="comments__slider">
           <li class="comments__item comments__item-show">
             <p class="comments__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
@@ -180,11 +186,14 @@
           </button>
         </div>
         <a class="comments__button-write button" href="#">Написать</a>
-      </section>  
-      <div class="comments__border border"></div>
+      </section>
       <section class="contacts">
         <div class="contacts__wrapper">
-          <h3 class="contacts__title">Контакты</h3>
+          <h3 class="contacts__title title">Контакты
+            <svg class="contacts__title-flag" width="47" height="82">
+              <use xlink:href="../img/sprite.svg#icon-flag"></use>
+            </svg>
+          </h3>
           <table class="contacts__list">
             <tr class="contacts__line contacts__email">
               <td class="contacts__name">e-mail:</td>
@@ -235,6 +244,14 @@
       </section>
     </main>
     <footer class="page-footer">
+      <div class="page-footer__logo">
+        <a class="page-footer__logo-link">
+          <span class="visually-hidden">Главная</span>
+          <svg class="icon icon-logo" width="102" height="34">
+            <use xlink:href="../img/sprite.svg#icon-logo"></use>
+          </svg>
+        </a>
+      </div>
       <ul class="page-footer__socials">
         <li class="page-footer__social-item">
           <a class="page-footer__social-link" href="#">

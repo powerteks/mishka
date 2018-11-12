@@ -1,18 +1,23 @@
 .form-order {
-  padding: 0 $indent-mobile;
+  margin: 0 auto;
+
+  width : $body-mobile;
 }
 
 .form-order__set {
-  margin : 0 0 45px-28;
-  padding: 0;
+  @include reset;
 
   border : none;
+}
 
-  & ul {
-    @include reset;
+.form-order__wrapper {
+  margin : 0 0 41px;
+}
 
-    list-style: none;
-  }
+.form-order__list {
+  @include reset;
+
+  list-style: none;
 }
 
 .form-order__legend {
@@ -28,6 +33,8 @@
 
   color         : $text-remark;
 
+// line
+// --------------------------------------------------
   &:after {
     margin    : 11px 1px 11px 30px;
     content   : "";
@@ -43,6 +50,8 @@
 
 .form-order__type,
 .form-order__color {
+  @include font-b(17px, 18px);
+
   margin-bottom: 30px-6;
   padding-left : 63px;
 
@@ -50,19 +59,19 @@
 
   position     : relative;
 
-  font-weight  : bold;
-  line-height  : 18px;
-
   cursor       : pointer;
 }
 
+.form-order__item--color {
+  margin: 32px 0 43px;
+}
+
 // radio
-// ------------------------------------------------------------------
-.form-order__type:hover .form-order__radio,
+// --------------------------------------------------
 .form-order__radio {
   position     : absolute;
   top          : -7px-1;
-  left         : 2px;
+  left         : 1px;
   width        : 38px-4;
   height       : 38px-4;
 
@@ -71,7 +80,7 @@
 }
 
 // radio checked
-// ------------------------------------------------------------------
+// --------------------------------------------------
 .form-order__input-radio:checked + .form-order__radio::after {
   content      : "";
 
@@ -86,15 +95,11 @@
 }
 
 .form-order__color {
-  margin-bottom: 49px-6;
-
-  &:first-child {
-    margin-top: 32px;
-  }
+  margin-top: 32px 0 49px-6;
 }
 
 // checkbox
-// ------------------------------------------------------------------
+// --------------------------------------------------
 .form-order__checkbox {
   position    : absolute;
   top         : -11px;
@@ -106,7 +111,7 @@
 }
 
 // checked
-// ------------------------------------------------------------------
+// --------------------------------------------------
 .form-order__input-check:checked + .form-order__checkbox::before,
 .form-order__input-check:checked + .form-order__checkbox::after {
   content      : "";
@@ -134,7 +139,7 @@
 }
 
 // radio & checkbox states
-// ------------------------------------------------------------------
+// --------------------------------------------------
 .form-order__type:hover .form-order__radio,
 .form-order__color:hover .form-order__checkbox {
   border-color: $text-remark;
@@ -155,22 +160,22 @@
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
-// ------------------------------------------------------------------
+// --------------------------------------------------
 
 .form-order__item:last-child .form-order__color {
   margin-bottom: 24px;
 }
 
-.form-order__set--name {
-  margin: -2px 0 -12px;
+.form-order__wrapper--name {
+  margin: -4px 0 -12px+4;
+}
 
-  & .form-order__legend {
-    margin-bottom: 23px;
-  }
+.form-order__legend--name {
+  margin-bottom: 19px;
 }
 
 .form-order__name {
-  font-weight: bold;
+  @include font-b(17px, 18px);
 }
 
 .form-order__block--icon {
@@ -178,10 +183,10 @@
 }
 
 .form-order__field {
-  @include font(17px, 21px);
+  @include font(17px, 18px);
 
-  margin-bottom   : 20px;
-  padding         : 13px 0 15px;
+  margin-bottom   : 16px;
+  padding         : 11px 0 15px;
 
   display         : block;
 
@@ -192,9 +197,10 @@
   border          : none;
   border-bottom   : 2px solid $base-line;
   background-color: transparent;
+  z-index         : 2;
 
   &::placeholder {
-    @include font(17px, 21px);
+    @include font(17px, 18px);
 
     font-family: $font-family;
 
@@ -213,18 +219,13 @@
   }
 }
 
-.form-order__set--contact {
+.form-order__wrapper--contacts {
   margin-bottom: 15px;
 }
 
 .form-order__legend--phone,
 .form-order__legend--email {
-  margin  : 20px 0 13px;
-
-  // &::after {
-  //   width    : 65%;
-  //   min-width: 170px;
-  // }
+  margin  : 20px 0 16px;
 }
 
 .form-order__field--phone,
@@ -243,7 +244,6 @@
   right   : 4px;
 
   fill    : $form-active ;
-  z-index : -1;
 }
 
 .form-order__icon--phone {
@@ -288,9 +288,233 @@
 .form-order__submit {
   @include font-b(17px, 21px);
 
-  margin-bottom: 56px;
+  margin-bottom : 56px-1;
+  padding-bottom: 14px;
 
-  font-family  : $font-family;
+  font-family   : $font-family;
 
-  cursor       : pointer;
+  cursor        : pointer;
+}
+
+// For Tablet
+// --------------------------------------------------
+@media (min-width: $tablet-width) {
+  .form-order {
+    margin  : 0;
+
+    width   : 100%;
+  }
+
+  .form-order__wrapper {
+    margin     : 0;
+    padding    : 24px $indent-tablet 39px;
+
+    display    : flex;
+
+    align-items: flex-start;
+  }
+
+  .form-order__legend {
+    padding-top: 28px;
+
+    width      : 25%;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .form-order__list,
+  .form-order__textarea {
+    width: 75%;
+  }
+
+  .form-order__type,
+  .form-order__color {
+    @include font(19px, 18px);
+
+    margin     : 0;
+    padding    : 29px 0 29px 80px;
+
+    display    : flex;
+
+    align-items: center;
+  }
+
+  .form-order__radio {
+    top          : 14px;
+    left         : 0;
+    width        : 48px;
+    height       : 48px;
+
+    border-radius: 25px;
+  }
+
+  .form-order__input-radio:checked + .form-order__radio::after {
+    top          : 13.4px;
+    left         : 13.6px;
+    width        : 21px;
+    height       : 21px;
+
+    border-radius: 12px;
+  }
+
+  .form-order__wrapper--color {
+    padding   : 37px $indent-tablet 16px;
+
+    background: $second-background;
+  }
+
+  .form-order__list--color {
+    display        : flex;
+
+    flex-flow      : row wrap;
+    justify-content: space-between;
+  }
+
+  .form-order__color {
+    padding: 29px 0 29px 80px;
+  }
+
+  .form-order__item--color {
+    margin: 0;
+
+    width : 47.7%;
+  }
+
+  .form-order__checkbox {
+    top   : 14px;
+    left  : 0;
+    width : 50px;
+    height: 48px;
+  }
+
+  .form-order__input-check:checked + .form-order__checkbox::before,
+  .form-order__input-check:checked + .form-order__checkbox::after {
+    top  : 28px;
+    left : 8px;
+    width: 15px;
+  }
+
+  .form-order__input-check:checked + .form-order__checkbox::after {
+    top  : 24px;
+    left : 15px;
+    width: 30px;
+  }
+
+  .form-order__wrapper--name {
+    padding: 44px $indent-tablet 32px;
+  }
+
+  .form-order__legend--name {
+    margin-top: -8px;
+  }
+
+  .form-order__block {
+    display    : flex;
+
+    align-items: baseline;
+  }
+
+  .form-order__name {
+    @include font-b(19px, 31px);
+
+    margin-right: 25px;
+  }
+
+  .form-order__field {
+    margin-bottom: 18px;
+    padding      : 17px 0 13px 17px;
+
+    font-size    : 19px;
+
+    &::placeholder {
+      font-size: 19px;
+    }
+  }
+
+  .form-order__wrapper--contacts {
+    padding-bottom: 32px;
+    
+    background    : $second-background;
+  }
+
+  .form-order__list--contacts {
+    width: 100%;
+  }
+
+  .form-order__block--icon {
+    display: flex;
+
+    width  : 100%;
+  }
+
+  .form-order__legend--phone,
+  .form-order__legend--email {
+    padding: 0;
+
+    width  : 25%;
+  }
+
+  .form-order__field--phone,
+  .form-order__field--email {
+    margin-left: 5px;
+
+    width      : 75%;
+  }
+
+  .form-order__icon--phone {
+    top  : 37px;
+    right: 25px;
+  }
+
+  .form-order__icon--email {
+    top  : 17px;
+    right: 22px;
+  }
+
+  .form-order__field--phone {
+    margin-top   : 20px;
+    margin-bottom: 18px;
+  }
+
+  .form-order__block--textarea {
+    padding: 16px $indent-tablet 32px;
+  }
+
+  .form-order__textarea {
+    @include font(19px, 26px);
+
+    padding: 7px 16px 1px;
+
+    &::placeholder {
+      @include font(19px, 30px);
+    }
+  }
+
+  .form-order__end {
+    margin         : 21px auto 49px;
+
+    display        : flex;
+    flex-direction : row-reverse;
+
+    width          : $body-tablet;
+
+    justify-content: space-between;
+    align-items    : baseline;
+  }
+
+  .form-order__remark {
+    @include font(17px, 30px);
+
+    margin   : 0;
+
+    transform: translateY(-2px);
+  }
+
+  .form-order__submit {
+    margin: 0;
+
+    width : 34.4%;
+  }
 }

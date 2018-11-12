@@ -13,98 +13,110 @@
           <span class="visually-hidden">Mеню</span>
         </button>
         <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__head">
-            <a class="main-nav__link main-nav__logo" href="index.html">
+          <li class="main-nav__item main-nav__logo">
+            <a class="main-nav__link main-nav__link--logo" href="index.html">
               <span class="visually-hidden">Главная</span>
-              <svg class="main-nav__logo--mobile" width="86" height="35">
-                <use xlink:href="../img/sprite.svg#logo__mobile"></use>
-              </svg>
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/logo_tablet.svg" type="image/svg+xml">
+                <img src="img/logo_mobile.svg"  width="86" height="35" alt="Мишка">
+              </picture>
             </a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__catalog">
             <a class="main-nav__link">Каталог товаров</a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__order">
             <a class="main-nav__link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link main-nav__link--search" href="#">
-              <div class="main-nav__icon">
-                <svg class="main-nav__icon--search" width="19" height="18">
-                  <use xlink:href="../img/sprite.svg#icon-search"></use>
-                </svg>
-              </div>
+              <svg class="main-nav__icon main-nav__icon--search" width="19" height="18">
+                <use xlink:href="../img/sprite.svg#icon-search"></use>
+              </svg>
               Поиск по сайту
             </a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__cart">
             <a class="main-nav__link main-nav__link--cart" href="#">
-              <div class="main-nav__icon">
-                <svg class="main-nav__icon--cart" width="20" height="19">
-                  <use xlink:href="../img/sprite.svg#icon-cart"></use>
-                </svg>
-              </div>
-              Корзина: <span class="main-nav__cart-status">пока пуста</span>
+              <svg class="main-nav__icon main-nav__icon--cart" width="20" height="19">
+                <use xlink:href="../img/sprite.svg#icon-cart"></use>
+              </svg>
+              Корзина:&nbsp;<span class="main-nav__cart-status">пока&nbsp;пуста</span>
             </a>
+          </li>
+          <li class="main-nav__item main-nav__item--delivery">
+            <a class="main-nav__link" href="#">Бесплатная доставка по России</a>
           </li>
         </ul>
       </nav>
-      <div class="page-header__slogan">
-        <h2 class="page-header__title">Каталог товаров</h2>
+      <div class="page-header__slogan border-white">
+        <h2 class="page-header__title title">Каталог товаров</h2>
       </div>
     </header>
     <main class="page-main">
       <section class="catalog">
         <article class="catalog-item" tabindex="0">
-          <a href="#" class="catalog-item__description">
-            <picture>
-              <source>
-              <img class="image" src="img/toy-bunny_mobile.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
+          <a href="#" class="catalog-item__photo">
+            <picture class="catalog-item__image">
+              <source media="(min-width: 768px)" srcset="img/toy-bunny_tablet.jpg">
+              <img class="image" src="img/toy-bunny_mobile.jpg" alt="Зайчик-попрыгайчик">
             </picture>
-            <h3 class="catalog-item__name">Зайчик-попрыгайчик</h3>
-            <p class="catalog-item__specifications">
-              Рост 30 см, вес 200 г</p>
           </a>
-          <a href="#" class="catalog-item__buy">
-            1 200 руб.
-            <svg class="catalog-item__buy-icon" width="20" height="19">
-              <use xlink:href="../img/sprite.svg#icon-cart"></use>
-            </svg>
-          </a>
+          <div class="catalog-item__list">
+            <a href="#" class="catalog-item__description">
+              <h3 class="catalog-item__name">Зайчик-попрыгайчик</h3>
+              <p class="catalog-item__specifications">
+                Рост 30 см, вес 200 г</p>
+            </a>
+            <a href="#" class="catalog-item__buy">
+              1 200 руб.
+              <svg class="catalog-item__buy-icon" width="20" height="19">
+                <use xlink:href="../img/sprite.svg#icon-cart"></use>
+              </svg>
+            </a>
+          </div>
         </article>
         <article class="catalog-item" tabindex="0">
-          <a href="#" class="catalog-item__description">
-            <picture>
-              <source>
-              <img class="image" src="img/laundry-basket_mobile.jpg" width="260" height="195" alt="Корзинка для белья">
-            </picture>
-            <h3 class="catalog-item__name">Корзинка для белья</h3>
-            <p class="catalog-item__specifications">
-              Диаметр 15 см, высота 10 см</p>
+          <a href="#" class="catalog-item__photo">
+           <picture class="catalog-item__image">
+              <source media="(min-width: 768px)" srcset="img/laundry-basket_tablet.jpg">
+              <img class="image" src="img/laundry-basket_mobile.jpg" alt="Корзинка для белья">
+            </picture> 
           </a>
-          <a href="#" class="catalog-item__buy">
-            690 руб.
-            <svg class="catalog-item__buy-icon" width="20" height="19">
-              <use xlink:href="../img/sprite.svg#icon-cart"></use>
-            </svg>
-          </a>
+          <div class="catalog-item__list">
+            <a href="#" class="catalog-item__description">
+              <h3 class="catalog-item__name">Корзинка для белья</h3>
+              <p class="catalog-item__specifications">
+                Диаметр 15 см, высота 10 см</p>
+            </a>
+            <a href="#" class="catalog-item__buy">
+              690 руб.
+              <svg class="catalog-item__buy-icon" width="20" height="19">
+                <use xlink:href="../img/sprite.svg#icon-cart"></use>
+              </svg>
+            </a>
+          </div>
         </article>
         <article class="catalog-item" tabindex="0">
-          <a href="#" class="catalog-item__description">
-            <picture>
-              <source>
-              <img class="image" src="img/basket-for-toys_mobile.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
-            </picture>
-            <h3 class="catalog-item__name">Большая корзинка для игрушек</h3>
-            <p class="catalog-item__specifications">
-              Диаметр 30 см, высота 30 см</p>
+          <a href="#" class="catalog-item__photo">
+           <picture class="catalog-item__image">
+              <source media="(min-width: 768px)" srcset="img/basket-for-toys_tablet.jpg">
+              <img class="image" class="image" src="img/basket-for-toys_mobile.jpg" alt="Большая корзинка для игрушек">
+            </picture> 
           </a>
-          <a href="#" class="catalog-item__buy">
-            1 500 руб.
-            <svg class="catalog-item__buy-icon" width="20" height="19">
-              <use xlink:href="../img/sprite.svg#icon-cart"></use>
-            </svg>
-          </a>
+          <div class="catalog-item__list">
+            <a href="#" class="catalog-item__description">
+              <h3 class="catalog-item__name">Большая корзинка для&nbsp;игрушек</h3>
+              <p class="catalog-item__specifications">
+                Диаметр 30 см, высота 30 см</p>
+            </a>
+            <a href="#" class="catalog-item__buy">
+              1 500 руб.
+              <svg class="catalog-item__buy-icon" width="20" height="19">
+                <use xlink:href="../img/sprite.svg#icon-cart"></use>
+              </svg>
+            </a>
+          </div>
         </article>
       </section>
       <section class="making">
@@ -115,9 +127,9 @@
           Процесс производства
         </h3>
         <div class="making__player">
-          <picture>
-            <source>
-              <img class="image" src="img/making-player_mobile.jpg" width="260" height="150" alt="Видео о производстве">
+          <picture class="making__image">
+            <source media="(min-width: 768px)" srcset="img/making-player_tablet.jpg">
+              <img class="image" src="img/making-player_mobile.jpg" alt="Видео о производстве">
           </picture>
           <button class="making__play">
             <svg class="making__play-icon" width="101" height="77">
@@ -126,7 +138,7 @@
           </button>
         </div>
         <div class="making__description">
-          <p class="making__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <p class="making__text">По просьбам наших любимых&nbsp;фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
           <a href="#" class="making__button button">Сделать заказ</a>
         </div>
       </section>
@@ -162,6 +174,14 @@
       </section>
     </main>
     <footer class="page-footer">
+      <div class="page-footer__logo">
+        <a class="page-footer__logo-link">
+          <span class="visually-hidden">Главная</span>
+          <svg class="icon icon-logo" width="102" height="34">
+            <use xlink:href="../img/sprite.svg#icon-logo"></use>
+          </svg>
+        </a>
+      </div>
       <ul class="page-footer__socials">
         <li class="page-footer__social-item">
           <a class="page-footer__social-link" href="#">

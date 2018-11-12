@@ -13,7 +13,7 @@
   right     : 0;
   bottom    : 0;
   left      : 0;
-  width     : 100vh;
+  width     : 100vw;
   height    : 100vh;
 
   opacity   : .9;
@@ -34,7 +34,7 @@
   border-top   : $border-line;
   border-bottom: $border-line;
   background   : $base-background;
-  box-shadow   : 0 5px 10px hsla(0, 0%, 0%, .25);
+  box-shadow   : 0 5px 10px $modal-shadow;
   z-index      : 5;
 }
 
@@ -97,12 +97,12 @@
   background    : transparent;
 
   &:hover {
-    border-color: $form-active ;
+    border-color: $form-active;
   }
 }
 
 //input type="radio
-
+// --------------------------------------------------
 .modal__radio:checked + .modal__size {
   color           : $base-text;
   border-color    : $text-remark;
@@ -113,6 +113,7 @@
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
+// --------------------------------------------------
 
 .modal__submit {
   margin-bottom   : 46px+1;
@@ -120,4 +121,47 @@
   color           : $button-text-hover;
   border-color    : $text-remark;
   background-color: $text-remark;
+}
+
+// For Tablet
+// --------------------------------------------------
+@media (min-width: $tablet-width) {
+  .modal__products {
+    padding   : 0;
+
+    left      : 50vw;
+    width     : 73.7%;
+
+    transform : translate(-50%, -50%);
+
+    border    : $border-line;
+    box-shadow: 0 5px 10px $modal-shadow;
+  }
+  
+  .modal__form {
+    margin: 0 auto;
+
+    width : 62.5%;
+  }
+
+  .modal__title {
+    @include font(30px, 57px);
+
+    margin: 33px 0 13px;
+  }
+
+  .modal__text {
+    @include font(17px, 30px);
+
+    margin: 14px 0 21px;
+  }
+
+  .modal__list {
+    margin-bottom: 31px;
+  }
+
+  .modal__submit {
+    margin-bottom: 45px;
+    padding      : 15px 0 13px;
+  }
 }

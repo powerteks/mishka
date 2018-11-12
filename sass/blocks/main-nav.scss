@@ -6,28 +6,38 @@
   @include font-b(17px, 21px)
   @include reset;
 
-  list-style : none;
+  list-style: none;
+}
+
+.main-nav__item {
+  border-bottom  : $border-line;
 }
 
 .main-nav__link {
-  padding        : 32px-5 30px 30px 23.5%;
-
-  display        : none;
-
-  text-decoration: none;
-
-  color          : $base-text;
-  border-bottom  : $border-line;
+  padding         : 32px-5 30px 30px 23.5%;
+  
+  display         : block;
+  
+  text-decoration : none;
+  
+  color           : $base-text;
+  background-color: transparent;
 
   &[href]:hover {
-    color: $link-hover;
+    opacity: .6;
   }
   &[href]:active {
     opacity: .3;
   }
 }
 
+// Mobile Only
+// --------------------------------------------------
 @media (max-width: $mobile-width) {
+  .main-nav__item {
+    display: none;
+  }
+
   .main-nav__button-toggle {
     display   : block;
 
@@ -76,62 +86,48 @@
     transform: rotate(-45deg);
   }
 
-  .main-nav--opened .main-nav__link {
+  .main-nav--opened .main-nav__item {
     display: block;
   }
 
   .main-nav--no-js {
-    & .main-nav__link {
+    & .main-nav__item {
       display: block;
     }
     & .main-nav__button-toggle {
       display: none;
     }
   }
-}
 
-.main-nav__logo {
-  padding         : 22px-1 0 22px 0;
+  .main-nav__logo {
+    display   : block;
 
-  display         : block;
-
-  border-top      : $border-line;
-  border-bottom   : $border-line;
-  background-color: $base-background;
-
-  &[href]:hover {
-    opacity: .6;
-  }
-  &[href]:active {
-    opacity: .3;
+    border-top: $border-line;
   }
 }
+// --------------------------------------------------
 
-.main-nav__logo--mobile {
-  margin : 0 auto;
+.main-nav__link--logo {
+  padding   : 22px-1 0 22px-4 0;
 
-  display: block;
+  text-align: center;
 }
 
 .main-nav__link--search,
 .main-nav__link--cart {
-  padding-left: 0;
+  position: relative;
 }
 
 .main-nav__icon {
-  display : inline-block;
-
-  position: relative;
-  width   : 23.8%;
-}
-
-.main-nav__icon--search,
-.main-nav__icon--cart {
   position: absolute;
-  top     : -14px;
-  right   : 18px;
+  top     : 30px;
+  left    : 9.8%;
 
   opacity : .2;
+}
+
+.main-nav__icon--search {
+  transform: translateY(1px);
 }
 
 .main-nav__link--search:hover .main-nav__icon--search,
@@ -144,4 +140,113 @@
 .main-nav__link--cart:active .main-nav__icon--cart {
   opacity: 1;
   fill   : $text-remark;
+}
+
+.main-nav-item--delivery {
+  display: none;
+}
+
+// For Tablet
+// --------------------------------------------------
+@media (min-width: $tablet-width) {
+  .main-nav__list {
+    display      : flex;
+
+    flex-wrap    : wrap;
+    align-content: stretch;
+    align-items  : stretch;
+  }
+
+  .main-nav__link {
+    padding   : 32px 30px 27px 33px;
+
+    box-sizing: border-box;
+  }
+
+  .main-nav__catalog {
+    order: 4;
+  }
+
+  .main-nav__order {
+    order: 5;
+  }
+
+  .main-nav__logo {
+    width: 48.2%;
+  }
+
+  .main-nav__link--logo {
+    padding   : 22px 0 20px-4 13.5%;
+
+    text-align: left;
+  }
+
+  .main-nav__link--logo img {
+    width    : 113px;
+    height   : 46px;
+
+    transform: translateX(-2px);
+  }
+
+  .main-nav__link--search {
+    font-size   : 0;
+
+    border-right: $border-line;
+    border-left : $border-line;
+  }
+
+  .main-nav__icon--search {
+    position : static;
+
+    transform: translateY(5px);
+  }
+
+  .main-nav__cart {
+    flex-grow: 1;
+  }
+
+  .main-nav__link--cart {
+    padding-left: 26.4%;
+  }
+
+  .main-nav__icon--cart {
+    transform: translateY(5px);
+  }
+
+  .main-nav__catalog,
+  .main-nav__order {
+    width : 26%;
+
+    border: none;
+
+    & .main-nav__link {
+      @include font(15px, 24px);
+
+      padding: 24px-7 15px 24px-7 8.8%;
+    }
+  }
+
+  .main-nav__catalog .main-nav__link {
+    padding-left: 24.4%;
+  }
+
+  .main-nav__item--delivery {
+    margin-left: auto;
+
+    display    : block;
+
+    width      : 38.4%;
+
+    border     : none;
+
+    order      : 7;
+
+    & .main-nav__link {
+      @include font(15px, 24px);
+
+      padding    : 24px-7 15px;
+
+      font-weight: normal;
+    }
+  }
 }

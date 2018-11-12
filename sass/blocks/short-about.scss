@@ -1,11 +1,11 @@
 .short-about {
-  padding: 0 $indent-mobile;
+  margin: 0 auto;
+
+  width : $body-mobile;
 }
 
 .short-about__title {
-  @include font-b(25px, 30px);
-
-  margin     : 35px-8 0 31px;
+  margin     : 35px-8+1 0 31px;
 }
 
 .short-about__list {
@@ -14,12 +14,11 @@
   list-style: none;
 }
 
-.short-about__advantages {
+.short-about__text {
+  @include font-b(17px, 20px);
+
   margin     : 12px 0 28px;
   padding-top: 3px;
-
-  font-weight: bold;
-  line-height: 20px;
 }
 
 .short-about__icon-wrapper {
@@ -33,6 +32,38 @@
 
 .short-about__icon {
   margin: auto;
-  
+
   fill  : $text-remark;
+}
+
+// For Tablet
+// --------------------------------------------------
+@media (min-width: $tablet-width) {
+  .short-about {
+    padding-bottom: 27px;
+
+    width: $body-tablet;
+  }
+
+  .short-about__title {
+    margin: 61px-11 0 58px-10 (-3px);
+  }
+
+  .short-about__list {
+    display   : flex;
+
+    max-height: 600px;
+
+    flex-flow : column wrap;
+  }
+
+  .short-about__item {
+    width: 50%;
+  }
+
+  .short-about__text {
+    @include font(20px, 22px);
+
+    margin-bottom: 56px;
+  }
 }

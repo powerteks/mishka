@@ -54,7 +54,8 @@ body {
   border         : 2px solid hsl(0, 0%, 0%);
   background     : transparent;
 
-  &:hover {
+  &:hover,
+  &:active {
     color     : $button-text-hover;
     border    : 2px solid $button-hover;
     background: $button-hover;
@@ -65,13 +66,70 @@ body {
   }
 }
 
-.border {
-  width           : 100%;
-  height          : 6px;
+.title {
+  @include font-b(25px, 29px);
+}
 
-  background-image: url(../img/border.svg);
+.border {
+  position: relative;
+
+  &::after {
+    content         : "";
+
+    position        : absolute;
+    right           : 0;
+    bottom          : 0;
+    left            : 0;
+    height          : 6px;
+
+    background: url(../img/border.svg);
+  }
 }
 
 .image {
   display: block;
 }
+
+// For Tablet
+// --------------------------------------------------
+@media (min-width: $tablet-width) {
+  body {
+    font-size: $font-size-tablet;
+  }
+
+  .title {
+    @include font(43px, 50px);
+  }
+
+  .button {
+    @include font(17px, 20px)
+  }
+
+  .border::after {
+    height: 15px; 
+    background-size: auto 15px;
+  }
+
+  .border-white {
+    position: relative;
+
+    &::after {
+      content   : "";
+
+      position  : absolute;
+      right     : 0;
+      bottom    : 0;
+      left      : 0;
+      height    : 10px;
+
+      background: url(../img/border-white.svg) top center;
+      z-index   : 2;
+    }
+  }
+
+  .image {
+    width : 100%;
+    height: 100%;
+  }
+}
+

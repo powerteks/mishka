@@ -1,5 +1,7 @@
 .catalog {
-  margin: 0 $indent-mobile;
+  margin: 0 auto;
+  
+  width : $body-mobile;
 }
 
 .catalog-item {
@@ -8,6 +10,41 @@
   text-decoration: none;
 
   color          : $base-text;
+}
+
+.catalog-item__image {
+  width  : 260px;
+  height : 195px;
+}
+
+.catalog-item {
+  &:hover .catalog-item__list {
+    box-shadow: 6px 0 10px $shadow-color;
+  }
+
+  &:hover a {
+    color: $base-text-hover;
+  }
+
+  &:hover .catalog-item__buy-icon {
+    opacity: 1;
+    fill   : $text-remark;
+  }
+
+  &:active {
+    box-shadow: 3px 0 5px $shadow-color;
+  }
+
+  &:active a {
+    color: $base-text-active;
+  }
+
+  &:active .catalog-item__buy-icon {
+    opacity: .3;
+  }
+}
+
+.catalog-item__list {
   border         : $border-line;
 }
 
@@ -20,35 +57,100 @@
 .catalog-item__name {
   @include font-b(17px, 24px);
 
-  margin : 0 27px;
+  margin : 0 10.4%;
   padding: 32px-5 0 16px-11;
 }
 
 .catalog-item__specifications {
   @include font(13px, 30px);
 
-  margin       : 0 27px;
-  padding      : 0 0 19px;
-  
-  position     : relative;
-  
-  border-bottom: $border-line;
+  margin       : 0 10.4% 19px;
 }
 
 .catalog-item__buy {
   @include font-b(15px, 24px)
 
-  padding        : 22px-1 27px 30px-3;
+  margin         : 0 10.4%;
+  padding        : 22px-1 0 30px-3;
 
   display        : flex;
 
   text-decoration: none;
 
   color          : $base-text;
+  border-top     : $border-line;
 
   justify-content: space-between;
 }
 
 .catalog-item__buy-icon {
   opacity: .2;
+}
+
+// For Tablet
+// --------------------------------------------------
+@media (min-width: $tablet-width) {
+  .catalog {
+    margin: 80px auto 53px;
+
+    width : $body-tablet;
+  }
+
+  .catalog-item {
+    margin-top : 54px;
+
+    display    : flex;
+
+    height     : 43.5vw;
+
+    border     : none;
+
+    flex-flow  : column wrap;
+    align-items: stretch;
+  }
+
+  .catalog-item__photo {
+    overflow: hidden;
+
+    width   : 50%;
+    height  : auto;
+  }
+
+  .catalog-item__list {
+    padding       : 25px 26px 0;
+
+    display       : flex;
+    flex-direction: column;
+
+    box-sizing    : border-box;
+    width         : 50%;
+
+    border        : $border-line;
+
+    flex-grow     : 1;
+  }
+
+  .catalog-item__name {
+    @include font(20px, 24px);
+
+    margin : 0;
+    padding: 0 0 5px;
+  }
+
+  .catalog-item__specifications {
+    margin       : 0;
+
+    font-size    : 15px;
+  }
+
+  .catalog-item__buy {
+    margin    : auto 5px 0;
+    padding   : 23px 0 26px;
+
+    box-sizing: border-box;
+
+    font-size : 17px;
+
+    border-top: $border-line;
+  }
 }

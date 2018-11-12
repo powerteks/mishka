@@ -1,9 +1,22 @@
 .page-main__appeal {
-  margin     : 29px-7 $indent-mobile 30px-9;
-  padding    : 0;
-  
-  font-size  : 13px;
-  line-height: 24px;
-  
-  color      : $base-text;
+  @include font(13px, 24px);
+
+  margin : 29px-7 auto 30px-9;
+  padding: 0;
+
+  width  : $body-mobile;
+
+  color  : $base-text;
+}
+
+// For Tablet
+// --------------------------------------------------
+@media (min-width: $tablet-width) {
+  .page-main__appeal {
+    @include font(17px, 30px);
+
+    margin: 73px auto 19px;
+
+    width : $body-tablet;
+  }
 }

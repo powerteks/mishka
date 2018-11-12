@@ -1,0 +1,132 @@
+.products {
+  padding-bottom: 36px+6;
+}
+
+.products__toggle {
+  display: none;
+}
+
+.products__link {
+  @include font-b(19px, 24px);
+
+  padding        : 30px-4 $indent-mobile 19px-1;
+
+  display        : flex;
+
+  transition     : .2s;
+  text-decoration: none;
+
+  color          : $text-item;
+  background     : $lite-item;
+
+  & span {
+    width: 50%;
+  }
+
+  &:hover {
+    margin-top    : -5px;
+    padding-bottom: 24px;
+
+    transition    : .2s;
+
+    background    : $lite-item-hover;
+  }
+  &:hover .products__icon {
+    opacity: .7;
+  }
+
+  &:active {
+    margin-top    : 0;
+    padding-bottom: 18px;
+
+    transition    : .2s;
+  }
+  &:active span,
+  &:active .products__icon {
+    opacity: .3;
+  }
+}
+
+.products__item span {
+  display: block;
+
+  width  : 40%;
+}
+
+.products__icon {
+  margin-left: auto;
+
+  opacity    : .5;
+  fill       : $icon-product;
+}
+
+.products__icon--interior {
+  margin-top  : -3px;
+  margin-right: 8px;
+}
+
+.products__icon--toy {
+  margin-top    : -5px;
+  margin-right  : -3px;
+}
+
+.products__link--right {
+  padding-bottom: 22px;
+
+  transition: .2s;
+
+  background: $dark-item;
+
+  &:hover {
+    transition: .2s;
+
+    background: $dark-item-hover;
+  }
+}
+
+// For Tablet
+// --------------------------------------------------
+@media (min-width: $tablet-width) {
+  .products {
+    padding-bottom: 36px+1;
+  }
+
+  .products__wrapper {
+    margin-top: -149px;
+    padding    : 0 $indent-tablet;
+    
+    min-height: 150px;
+
+    display    : flex;
+    align-items: flex-end;
+  }
+
+  .products__link {
+    @include font(20px, 30px);
+
+    padding   : 28px 36px 26px;
+
+    width     : 50%;
+
+    &:hover {
+      padding-bottom: 31px;
+    }
+  }
+
+  .products__link--right {
+    padding-bottom: 27px;
+
+    &:hover {
+      padding-bottom: 32px;
+    }
+  }
+
+  .products__icon--interior {
+    margin-top  : 2px;
+    margin-right: 1px;
+  }
+
+  .products__icon--toy {
+    margin-top: 3px;
+  }
+}
