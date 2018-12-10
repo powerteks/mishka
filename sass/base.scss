@@ -67,27 +67,30 @@ body {
 }
 
 .title {
-  @include font-b(25px, 29px);
+  @include font-b($font-title, $lheight-title);
 }
 
 .border {
   position: relative;
 
   &::after {
-    content         : "";
-
-    position        : absolute;
-    right           : 0;
-    bottom          : 0;
-    left            : 0;
-    height          : 6px;
-
-    background: url(../img/border.svg);
+    content        : "";
+    
+    position       : absolute;
+    right          : 0;
+    bottom         : 0;
+    left           : 0;
+    height         : 7px;
+    
+    background     : url(../img/border.svg);
+    background-size: auto 7px;
   }
 }
 
 .image {
   display: block;
+  width  : 100%;
+  height : auto;
 }
 
 // For Tablet
@@ -98,32 +101,35 @@ body {
   }
 
   .title {
-    @include font(43px, 50px);
+    @include font($font-title-tablet, $lheight-title-tablet);
   }
 
   .button {
-    @include font(17px, 20px)
+    @include font(17px, 20px);
+
+    padding: 14px 0;
   }
 
   .border::after {
-    height: 15px; 
-    background-size: auto 15px;
+    height: 16px; 
+    background-size: auto 16px;
   }
 
   .border-white {
     position: relative;
 
     &::after {
-      content   : "";
-
-      position  : absolute;
-      right     : 0;
-      bottom    : 0;
-      left      : 0;
-      height    : 10px;
-
-      background: url(../img/border-white.svg) top center;
-      z-index   : 2;
+      content        : "";
+      
+      position       : absolute;
+      right          : 0;
+      bottom         : 0;
+      left           : 0;
+      height         : 12px;
+      
+      background     : url(../img/border-white.svg) top center;
+      background-size: auto 22.7px;
+      z-index        : 2;
     }
   }
 
@@ -133,3 +139,24 @@ body {
   }
 }
 
+// For Desktop
+// --------------------------------------------------
+@media (min-width: $desktop-width) {
+  .title {
+    @include font($font-title-desktop, $lheight-title-desktop);
+  }
+
+  .border::after {
+    margin               : 0 auto;
+    
+    width                : $small-body-desktop;
+    height               : 25px;
+    background-position-x: center; 
+    background-size      : auto 25px;
+  }
+
+  .border-white::after {
+    height         : 17px;
+    background-size: auto 36.7px;
+  }
+}

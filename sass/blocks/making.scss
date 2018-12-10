@@ -6,18 +6,19 @@
   text-decoration: none;
 
   color          : $base-text;
-  border         : $border-line;
 }
 
 .making__title {
   @include font-b(17px, 24px);
 
-  margin     : 0 13%;
-  padding    : 29px-6 0 30px-5;
-
-  display    : flex;
-
-  align-items: center;
+  margin       : 0;
+  padding      : 29px-6 13% 30px-5;
+  
+  display      : flex;
+  
+  align-items  : center;
+  border       : $border-line;
+  border-bottom: none;
 }
 
 .making__title-icon {
@@ -67,15 +68,21 @@
   }
 }
 
+.making__description {
+  border    : $border-line;
+  border-top: none;
+}
+
 .making__text {
   @include font(13px, 24px)
 
-  margin : 0 13%;
-  padding: 34px-8 0 29px-4;
+  margin : 0 13% 29px-3;
+  padding: 34px-8 0 0;
+
 }
 
 .making__button {
-  margin: 0 13% 32px;
+  margin: 0 13% 33px-2;
 
   width : auto;
 }
@@ -95,17 +102,16 @@
   }
 
   .making__title {
-    margin       : 0;
-    padding      : 34px 41px 28px;
-
-    position     : relative;
-
-    font-size    : 20px;
-
-    border       : $border-line;
-    border-bottom: none;
-
-    order        : 2;
+    margin    : 0;
+    padding   : 34px 6% 3px;
+    
+    position  : relative;
+    
+    font-size : 20px;
+    
+    border-top: none;
+    
+    order     : 2;
 
     &::after {
       content   : "";
@@ -126,7 +132,7 @@
 
   .making__description {
     margin    : 0;
-    padding   : 0 41px 45px;
+    padding   : 0 6% 45px;
 
     border    : $border-line;
     border-top: none;
@@ -135,8 +141,7 @@
   }
 
   .making__text {
-    margin     : 0;
-    padding    : 0 0 35px;
+    margin     : 0 0 35px;
 
     font-size  : 15px;
     line-height: 30px;
@@ -168,5 +173,55 @@
     &:active .making__description {
       box-shadow: 0 3px 5px $shadow-color;
     }
+  }
+}
+
+// For Desktop
+// --------------------------------------------------    
+@media (min-width: $desktop-width) {
+  .making {
+    margin: 5px auto 104px;
+    position  : relative;
+    width     : $small-body-desktop;
+  }
+
+  .making__player {
+    position: absolute;
+    width   : 682px;
+    height  : 455px;
+    top     : 0;
+    left    : 0;
+  }
+
+  .making__title,
+  .making__description {
+    margin-left: 682px;
+    padding    : 42px 57px 0 79px;
+    width      : 367px;
+    border    : none;
+    border-right    : $border-line;
+    box-sizing : border-box;
+  }
+
+  .making__title {
+    display: flex;
+    flex-direction: column;
+    border-top: $border-line;
+  }
+
+  .making__title-icon {
+    margin-right: auto;
+    margin-bottom: 21px;
+  }
+
+  .making__description {
+    padding-top: 7px;
+    height     : 312px;
+    border-bottom: $border-line;
+  }
+  
+  .making__text {
+    padding-bottom: 46px;
+    margin: 0;
   }
 }

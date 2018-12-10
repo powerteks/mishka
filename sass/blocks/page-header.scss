@@ -16,7 +16,12 @@
 .page-header__slogan--main {
   min-height: 282px;
 
-  background: hsl(0, 0%, 98%) url(../img/mishka-slogan_mobile.jpg) top -18px center no-repeat;
+  background: hsl(0, 0%, 98%) url(../img/mishka_mobile.jpg) top -18px center no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/mishka_mobile-x2.jpg");
+    background-size : auto 373px;
+  }
 }
 
 .page-header__title--main {
@@ -35,22 +40,49 @@
 // --------------------------------------------------
 @media (min-width: $tablet-width) {
   .page-header__slogan {
-    margin-top: -58px;
+    margin-top: -59px;
+    padding   : 0;
 
     z-index   : -1;
   }
 
   .page-header__slogan--main {
-    min-height: 626px+117;
+    min-height: 626px+118;
 
-    background: hsl(0, 0%, 98%) url(../img/mishka-slogan_tablet.jpg) top center no-repeat;
+    background: hsl(0, 0%, 98%) url(../img/mishka_tablet.jpg) top center no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/mishka_tablet-x2.jpg");
+      background-size : auto 746px;
+    }
   }
 
   .page-header__title {
+    margin : 0 auto;
     padding: 93px 0 81px;
+    
+    width  : $body-tablet;
   }
 
   .page-header__title--main {
+    @include font(43.5px, 51px);
+
     padding: 170px-18 0 50px;
+  }
+}
+
+// For Desktop
+// --------------------------------------------------
+@media (min-width: $desktop-width) {
+  .page-header__title--main {
+    @include font(53px, 58px);
+
+    padding: 170px-18 0 50px;
+  }
+
+  .page-header__title {
+    padding: 94px 0 103px;
+
+    width: $center-wrapper;
   }
 }

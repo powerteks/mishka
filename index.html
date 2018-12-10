@@ -17,13 +17,14 @@
             <a class="main-nav__link main-nav__link--logo">
               <span class="visually-hidden">Главная</span>
               <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo_desktop.svg" type="image/svg+xml">
                 <source media="(min-width: 768px)" srcset="img/logo_tablet.svg" type="image/svg+xml">
                 <img src="img/logo_mobile.svg"  width="86" height="35" alt="Мишка">
               </picture>
             </a>
           </li>
           <li class="main-nav__item main-nav__catalog">
-            <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+            <a class="main-nav__link main-nav__link--catalog" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="main-nav__item main-nav__order">
             <a class="main-nav__link" href="form.html">Вязание на заказ</a>
@@ -44,65 +45,72 @@
               Корзина:&nbsp;<span class="main-nav__cart-status">пока&nbsp;пуста</span>
             </a>
           </li>
+          <li class="main-nav__item main-nav__new">
+            <a href="" class="main-nav__link">Новые поступления</a>
+          </li>
+          <li class="main-nav__item main-nav__sell-out">
+            <a href="" class="main-nav__link">Распродажа</a>
+          </li>
           <li class="main-nav__item main-nav__item--delivery">
-            <a class="main-nav__link" href="#">Бесплатная доставка по России</a>
+            <a class="main-nav__link main-nav__link--delivery" href="#">Бесплатная доставка по России</a>
           </li>
         </ul>
       </nav>
       <div class="page-header__slogan page-header__slogan--main">
+        <h1 class="page-header__main-title visually-hidden">Магазин Мишка</h1>
         <h2 class="page-header__title page-header__title--main title">Милые&nbsp;штуки ручной работы&nbsp;для&nbsp;дома</h2>
       </div>
     </header>
     <main class="page-main">
       <section class="products border">
         <div class="products__wrapper border-white">
-          <a class="products__link" href="#">
-            <span>Предметы интерьера</span>
-            <svg class="products__icon products__icon--interior" width="40" height="62">
-              <use xlink:href="../img/sprite.svg#icon-interior"></use>
-            </svg>
-          </a>
-          <a class="products__link products__link--right" href="#">
-            <span>Детские игрушки</span>
-            <svg class="products__icon products__icon--toy" width="60" height="60">
-              <use xlink:href="../img/sprite.svg#icon-toy"></use>
-            </svg>
-          </a>
+          <div class="products__list">
+            <a class="products__link" href="#">
+              <span>Предметы интерьера</span>
+              <svg class="products__icon products__icon--interior" width="40" height="62">
+                <use xlink:href="../img/sprite.svg#icon-interior"></use>
+              </svg>
+            </a>
+            <a class="products__link products__link--right" href="#">
+              <span>Детские игрушки</span>
+              <svg class="products__icon products__icon--toy" width="60" height="60">
+                <use xlink:href="../img/sprite.svg#icon-toy"></use>
+              </svg>
+            </a>
+          </div>
         </div>
         <article class="product-card">
           <div class="product-card__header">
             <h3 class="product-card__name title">Вязаные корзинки</h3>
             <b class="product-card__remark">Товар недели</b>
           </div>
-          <ul class="product-card__description">
-            <li class="product-card__item product-card__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</li>
-            <li class="product-card__item">
-              <table class="product-card__table">
-                <tr class="product-card__line">
-                  <td class="product-card__name-property">Цвет:</td>
-                  <td class="product-card__property">«Тиффани»/серый</td>
-                </tr>
-                <tr class="product-card__line">
-                  <td class="product-card__name-property">Диаметр:</td>
-                  <td class="product-card__property">25 см</td>
-                </tr>
-                <tr class="product-card__line">
-                  <td class="product-card__name-property">Высота:</td>
-                  <td class="product-card__property">15 см</td>
-                </tr>
-              </table>
-            </li>
-            <li class="product-card__item product-card__photo image">
-              <picture class="product-card__image">
-                <source media="(min-width: 768px)" srcset="img/knitted-baskets_tablet.jpg">
-                <img src="img/knitted-baskets_mobile.jpg" alt="Вязаные корзинки">
-              </picture>
-            </li>
-            <li class="product-card__item product-card__price">Цена: <span>990</span> руб.</li>
-            <li class="product-card__item">
-              <a class="product-card__buy button" href="#">Заказать</a>
-            </li>
-          </ul>
+          <div class="product-card__description">
+            <p class="product-card__item product-card__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+            <table class="product-card__item product-card__table">
+              <tr class="product-card__line">
+                <td class="product-card__name-property">Цвет:</td>
+                <td class="product-card__property">«Тиффани»/серый</td>
+              </tr>
+              <tr class="product-card__line">
+                <td class="product-card__name-property">Диаметр:</td>
+                <td class="product-card__property">25 см</td>
+              </tr>
+              <tr class="product-card__line">
+                <td class="product-card__name-property">Высота:</td>
+                <td class="product-card__property">15 см</td>
+              </tr>
+            </table>
+            <picture class="product-card__item product-card__photo">
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/webp/knitted-baskets_desktop.webp 1x, img/webp/knitted-baskets_desktop-x2.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/knitted-baskets_tablet.webp 1x, img/webp/knitted-baskets_tablet-x2.webp 2x">
+              <source type="image/webp" srcset="img/webp/knitted-baskets_mobile.webp 1x, img/webp/knitted-baskets_mobile-x2.webp 2x">
+              <source media="(min-width: 1150px)" srcset="img/knitted-baskets_desktop.jpg 1x, img/knitted-baskets_desktop-x2.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/knitted-baskets_tablet.jpg 1x, img/knitted-baskets_tablet-x2.jpg 2x">
+              <img class="image" src="img/knitted-baskets_mobile.jpg" srcset="img/knitted-baskets_mobile-x2.jpg 2x" alt="Вязаные корзинки">
+            </picture>
+            <p class="product-card__item product-card__price">Цена: <span>990</span> руб.</p>
+              <a class="product-card__item product-card__buy button" href="#">Заказать</a>
+          </div>
         </article>
       </section>
       <section class="short-about">
@@ -167,7 +175,7 @@
             <span class="comments__login">@misssssiskras</span>
           </li>
           <li class="comments__item">
-            <p class="comments__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Ты семантика, которое наш коварных языком выйти реторический взобравшись, бросил до. Моей собрал приставка рекламных маленькая семь даже рыбными взгляд!</p>
+            <p class="comments__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Ты семантика, которое наш коварных языком выйти риторический взобравшись, бросил до. Моей собрал приставка рекламных маленькая семь даже рыбными взгляд!</p>
             <span class="comments__author">Анастас Красивников</span>
             <span class="comments__login">@anastas</span>
           </li>
@@ -209,6 +217,12 @@
         </div>
         <div class="contacts__wrapper-map">
           <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aedd58cfa11bff1d8a5924b9e9b00afe0e49b15dbf8140b7b2dd8a01c3d998474&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+          <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/webp/map_desktop.webp 1x, img/webp/map_desktop-x2.webp 2x">
+              <source type="image/webp" srcset="img/webp/map.webp 1x, img/webp/map-x2.webp 2x">
+              <source media="(min-width: 1150px)" srcset="img/map_desktop.jpg 1x, img/map_desktop-x2.jpg 2x">
+              <img class="contacts__map-img image" src="img/map.jpg" srcset="img/map-x2.jpg 2x" alt="Вязаные корзинки">
+            </picture>
         </div>
         <a class="contacts__button-write button" href="#">Напишите нам</a>
       </section>
@@ -244,45 +258,63 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__logo">
-        <a class="page-footer__logo-link">
-          <span class="visually-hidden">Главная</span>
-          <svg class="icon icon-logo" width="102" height="34">
-            <use xlink:href="../img/sprite.svg#icon-logo"></use>
-          </svg>
-        </a>
-      </div>
-      <ul class="page-footer__socials">
-        <li class="page-footer__social-item">
-          <a class="page-footer__social-link" href="#">
-            <svg class="page-footer__icon page-footer__icon--instagram" width="28" height="21">
-              <use xlink:href="../img/sprite.svg#icon-instagram"></use>
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo">
+          <a class="page-footer__logo-link">
+            <span class="visually-hidden">Главная</span>
+            <svg class="page-footer__logo-icon" width="102" height="34">
+              <use xlink:href="../img/sprite.svg#icon-logo"></use>
             </svg>
           </a>
-        </li>
-        <li class="page-footer__social-item">
-          <a class="page-footer__social-link" href="#">
-            <svg class="page-footer__icon icon-facebook" width="15" height="28">
-              <use xlink:href="../img/sprite.svg#icon-facebook"></use>
+        </div>
+        <ul class="page-footer__socials">
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link" href="#">
+              <svg class="page-footer__icon page-footer__icon--instagram" width="28" height="21">
+                <use xlink:href="../img/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link" href="#">
+              <svg class="page-footer__icon icon-facebook" width="15" height="28">
+                <use xlink:href="../img/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link" href="#">
+              <svg class="page-footer__icon icon-twitter" width="23" height="20">
+                <use xlink:href="../img/sprite.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="page-footer__copyright">
+          <a class="page-footer__copyright-link" href="#">Разработано
+            <svg class="page-footer__academy" width="27" height="34">
+              <use xlink:href="../img/sprite.svg#icon-academy"></use>
             </svg>
           </a>
-        </li>
-        <li class="page-footer__social-item">
-          <a class="page-footer__social-link" href="#">
-            <svg class="page-footer__icon icon-twitter" width="23" height="20">
-              <use xlink:href="../img/sprite.svg#icon-twitter"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-      <div class="page-footer__copyright">
-        <a class="page-footer__copyright-link" href="#">Разработано
-          <svg class="page-footer__academy" width="27" height="34">
-            <use xlink:href="../img/sprite.svg#icon-academy"></use>
-          </svg>
-        </a>
+        </div>
       </div>
     </footer>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(51487897, "init", {
+            id:51487897,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/51487897" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

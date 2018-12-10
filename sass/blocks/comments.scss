@@ -37,7 +37,7 @@
 
 .comments__login {
   @include font(17px, 20px);
-  
+
   margin   : 8px+2 0 13px;
 
   display  : block;
@@ -99,10 +99,12 @@
   }
 }
 
-.comments__button--next .comments__arrow {
-  transform   : translateX(-3px) rotate(180deg);
+.comments__button--next {
+  border-left: none;
 
-  border-right: none;
+  & .comments__arrow {
+    transform   : translateX(-3px) rotate(180deg);
+  }
 }
 
 // For Tablet
@@ -134,25 +136,48 @@
     margin-top: 9px;
   }
 
-  .comments__button-write {
-    padding-top: 14px;
-
-    position   : absolute;
-    top        : 79px;
-    right      : $indent-tablet;
-    width      : 175px;
-    height     : 52px;
-  }
-
   .comments__control {
+    margin  : 0;
+    
     position: absolute;
+    top     : 356px;
     right   : $indent-tablet;
-    bottom  : 96px-1;
     width   : 173px;
     height  : 52px;
   }
 
   .comments__button {
     border: none;
+  }
+
+  .comments__button-write {
+    position   : absolute;
+    top        : 79px;
+    right      : $indent-tablet;
+    width      : 175px;
+    height     : 52px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .comments {
+    margin    : 0 auto;
+    padding   : 80px-10 90px 90px $row-desktop;
+
+    width     : 785px;
+    min-height: 387px;
+  }
+
+  .comments__text {
+    min-height: 104px;
+  }
+
+  .comments__control {
+    top: 307px;
+  }
+
+  .comments__control,
+  .comments__button-write {
+    right: 0;
   }
 }

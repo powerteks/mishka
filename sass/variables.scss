@@ -26,18 +26,41 @@ $modal-shadow     : hsla(0, 0%, 0%, .25);
 
 // styles
 //--------------------------------------------------------------
-$font-family     : "Open Sans", "Arial", sans-serif;
-$font-size       : 15px;
-$line-height     : 30px;
-$font-size-tablet: 17px;
-$indent-mobile   : 9.3%;
-$indent-tablet   : 6.5%;
-$body-mobile     : 81.4%;
-$body-tablet     : 87%;
-$border-line     : 1px solid $gray-line;
+$font-family          : "Open Sans", "Arial", sans-serif;
+$font-size            : 15px;
+$line-height          : 30px;
+$font-title           : 25px;
+$lheight-title        : 29px;
+// tablet font size-----------------------------------------
+$font-size-tablet     : 17px;
+$font-title-tablet    : 43px;
+$lheight-title-tablet : 50px;
+// desktop font size----------------------------------------
+$font-title-desktop   : 53px;
+$lheight-title-desktop: 57px;
 
-// styles
+// sizes and indents----------------------------------------
+$indent-mobile        : 9.3%;
+$body-mobile          : 81.4%;
+// for tablet-----------------------------------------------
+$indent-tablet        : 6.5%;
+$indent-tablet-view   : 6.5vw; 
+$body-tablet          : 87%;
+// for desktop----------------------------------------------
+$indent-desktop       : 100px;
+$half-indent          : 50px;
+$row-desktop          : 175px;
+$body-desktop         : 1150px;
+$small-body-desktop   : 1050px;
+$center-wrapper       : 700px;
+
+$border-line          : 1px solid $gray-line;
+
+// device sizes
 //--------------------------------------------------------------
 $mobile-width : 767px;
 $tablet-width : 768px;
-$desktop-width: 1200px;
+$desktop-width: 1150px;
+
+$retina-dpi   : 144dpi;
+$retina-dppx  : 1.5dppx;

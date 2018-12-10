@@ -33,8 +33,8 @@
 
   color         : $text-remark;
 
-// line
-// --------------------------------------------------
+  // line
+  // --------------------------------------------------
   &:after {
     margin    : 11px 1px 11px 30px;
     content   : "";
@@ -95,7 +95,7 @@
 }
 
 .form-order__color {
-  margin-top: 32px 0 49px-6;
+  margin: 32px 0 49px-6;
 }
 
 // checkbox
@@ -305,11 +305,17 @@
     width   : 100%;
   }
 
+  .form-order__set:nth-child(even) {
+    background: $second-background;
+  }
+
   .form-order__wrapper {
-    margin     : 0;
-    padding    : 24px $indent-tablet 39px;
+    margin     : 0 auto;
+    padding    : 24px 0 39px;
 
     display    : flex;
+
+    width      : $body-tablet;
 
     align-items: flex-start;
   }
@@ -360,9 +366,7 @@
   }
 
   .form-order__wrapper--color {
-    padding   : 37px $indent-tablet 16px;
-
-    background: $second-background;
+    padding: 37px 0 16px;
   }
 
   .form-order__list--color {
@@ -370,10 +374,6 @@
 
     flex-flow      : row wrap;
     justify-content: space-between;
-  }
-
-  .form-order__color {
-    padding: 29px 0 29px 80px;
   }
 
   .form-order__item--color {
@@ -403,7 +403,7 @@
   }
 
   .form-order__wrapper--name {
-    padding: 44px $indent-tablet 32px;
+    padding: 44px 0 32px;
   }
 
   .form-order__legend--name {
@@ -435,8 +435,6 @@
 
   .form-order__wrapper--contacts {
     padding-bottom: 32px;
-    
-    background    : $second-background;
   }
 
   .form-order__list--contacts {
@@ -478,8 +476,16 @@
     margin-bottom: 18px;
   }
 
+  .form-order__textarea {
+    width      : 75%;
+  }
+
   .form-order__block--textarea {
-    padding: 16px $indent-tablet 32px;
+    width: 100%;
+  }
+
+  .form-order__legend--textarea {
+    margin-top: 12px;
   }
 
   .form-order__textarea {
@@ -493,7 +499,7 @@
   }
 
   .form-order__end {
-    margin         : 21px auto 49px;
+    margin         : 13px auto 49px;
 
     display        : flex;
     flex-direction : row-reverse;
@@ -516,5 +522,89 @@
     margin: 0;
 
     width : 34.4%;
+  }
+}
+
+// For Desktop
+// --------------------------------------------------
+@media (min-width: $desktop-width) {
+  .form-order__wrapper {
+    width: $small-body-desktop;
+  }
+
+  .form-order__legend {
+    padding-left: 62px;
+
+    width       : auto;
+
+    flex-grow   : 1;
+  }
+
+  .form-order__list {
+    width: 875px;
+  }
+
+  .form-order__wrapper--color {
+    padding-top: 36px;
+  }
+
+  .form-order__item--color {
+    width: 262px;
+
+    &:nth-child(3n+2) {
+      width: 264px;
+    }
+  }
+
+  .form-order__list--color {
+    justify-content: flex-start;
+  }
+
+  .form-order__name {
+    margin-left: 2px;
+  }
+
+  .form-order__block {
+    margin-right: $row-desktop;
+
+    width       : $center-wrapper;
+  }
+
+  .form-order__block--icon {
+    width: 875px;
+  }
+
+  .form-order__field,
+  .form-order__textarea {
+    box-sizing: border-box;
+    width     : $center-wrapper;
+  }
+
+  .form-order__icon {
+    right: 7px;
+  }
+
+  .form-order__icon--email {
+    right: 4px;
+  }
+
+  .form-order__block--textarea {
+    width: 100%;
+  }
+
+  .form-order__end {
+    margin: 10px 0 50px;
+
+    width : $center-wrapper;
+  }
+
+  .form-order__remark {
+    transform: translate(1px, -1px);
+  }
+
+  .form-order__submit {
+    padding: 13px 31px 14px;
+
+    width  : auto;
   }
 }

@@ -17,13 +17,14 @@
             <a class="main-nav__link main-nav__link--logo" href="index.html">
               <span class="visually-hidden">Главная</span>
               <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo_desktop.svg" type="image/svg+xml">
                 <source media="(min-width: 768px)" srcset="img/logo_tablet.svg" type="image/svg+xml">
                 <img src="img/logo_mobile.svg"  width="86" height="35" alt="Мишка">
               </picture>
             </a>
           </li>
           <li class="main-nav__item main-nav__catalog">
-            <a class="main-nav__link">Каталог товаров</a>
+            <a class="main-nav__link main-nav__link--catalog">Каталог товаров</a>
           </li>
           <li class="main-nav__item main-nav__order">
             <a class="main-nav__link" href="form.html">Вязание на заказ</a>
@@ -44,13 +45,19 @@
               Корзина:&nbsp;<span class="main-nav__cart-status">пока&nbsp;пуста</span>
             </a>
           </li>
+          <li class="main-nav__item main-nav__new">
+            <a href="" class="main-nav__link">Новые поступления</a>
+          </li>
+          <li class="main-nav__item main-nav__sell-out">
+            <a href="" class="main-nav__link">Распродажа</a>
+          </li>
           <li class="main-nav__item main-nav__item--delivery">
-            <a class="main-nav__link" href="#">Бесплатная доставка по России</a>
+            <a class="main-nav__link main-nav__link--delivery" href="#">Бесплатная доставка по России</a>
           </li>
         </ul>
       </nav>
       <div class="page-header__slogan border-white">
-        <h2 class="page-header__title title">Каталог товаров</h2>
+        <h1 class="page-header__title title">Каталог товаров</h1>
       </div>
     </header>
     <main class="page-main">
@@ -58,8 +65,12 @@
         <article class="catalog-item" tabindex="0">
           <a href="#" class="catalog-item__photo">
             <picture class="catalog-item__image">
-              <source media="(min-width: 768px)" srcset="img/toy-bunny_tablet.jpg">
-              <img class="image" src="img/toy-bunny_mobile.jpg" alt="Зайчик-попрыгайчик">
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/webp/toy-bunny_desktop.webp 1x, img/webp/toy-bunny_desktop-x2.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/toy-bunny_tablet.webp 1x, img/webp/toy-bunny_tablet-x2.webp 2x">
+              <source type="image/webp" srcset="img/webp/toy-bunny_mobile.webp 1x, img/webp/toy-bunny_mobile-x2.webp 2x">
+              <source media="(min-width: 1150px)" srcset="img/toy-bunny_desktop.jpg 1x, img/toy-bunny_desktop-x2.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/toy-bunny_tablet.jpg 1x, img/toy-bunny_tablet-x2.jpg 2x">
+              <img class="image" src="img/toy-bunny_mobile.jpg" srcset="img/toy-bunny_mobile-x2.jpg 2x" alt="Зайчик-попрыгайчик">
             </picture>
           </a>
           <div class="catalog-item__list">
@@ -79,8 +90,12 @@
         <article class="catalog-item" tabindex="0">
           <a href="#" class="catalog-item__photo">
            <picture class="catalog-item__image">
-              <source media="(min-width: 768px)" srcset="img/laundry-basket_tablet.jpg">
-              <img class="image" src="img/laundry-basket_mobile.jpg" alt="Корзинка для белья">
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/webp/laundry-basket_desktop.webp 1x, img/webp/laundry-basket_desktop-x2.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/laundry-basket_tablet.webp 1x, img/webp/laundry-basket_tablet-x2.webp 2x">
+              <source type="image/webp" srcset="img/webp/laundry-basket_mobile.webp 1x, img/webp/laundry-basket_mobile-x2.webp 2x">
+              <source media="(min-width: 1150px)" srcset="img/laundry-basket_desktop.jpg 1x, img/laundry-basket_desktop-x2.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/laundry-basket_tablet.jpg 1x, img/laundry-basket_tablet-x2.jpg 2x">
+              <img class="image" src="img/laundry-basket_mobile.jpg" srcset="img/laundry-basket_mobile-x2.jpg 2x" alt="Корзинка для белья">
             </picture> 
           </a>
           <div class="catalog-item__list">
@@ -100,8 +115,12 @@
         <article class="catalog-item" tabindex="0">
           <a href="#" class="catalog-item__photo">
            <picture class="catalog-item__image">
-              <source media="(min-width: 768px)" srcset="img/basket-for-toys_tablet.jpg">
-              <img class="image" class="image" src="img/basket-for-toys_mobile.jpg" alt="Большая корзинка для игрушек">
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/webp/basket-for-toys_desktop.webp 1x, img/webp/basket-for-toys_desktop-x2.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/basket-for-toys_tablet.webp 1x, img/webp/basket-for-toys_tablet-x2.webp 2x">
+              <source type="image/webp" srcset="img/webp/basket-for-toys_mobile.webp 1x, img/webp/basket-for-toys_mobile-x2.webp 2x">
+              <source media="(min-width: 1150px)" srcset="img/basket-for-toys_desktop.jpg 1x, img/basket-for-toys_desktop-x2.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/basket-for-toys_tablet.jpg 1x, img/basket-for-toys_tablet-x2.jpg 2x">
+              <img class="image" src="img/basket-for-toys_mobile.jpg" srcset="img/basket-for-toys_mobile-x2.jpg 2x" alt="Большая корзинка для игрушек">
             </picture> 
           </a>
           <div class="catalog-item__list">
@@ -138,7 +157,7 @@
           </button>
         </div>
         <div class="making__description">
-          <p class="making__text">По просьбам наших любимых&nbsp;фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <p class="making__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
           <a href="#" class="making__button button">Сделать заказ</a>
         </div>
       </section>
@@ -174,45 +193,63 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__logo">
-        <a class="page-footer__logo-link">
-          <span class="visually-hidden">Главная</span>
-          <svg class="icon icon-logo" width="102" height="34">
-            <use xlink:href="../img/sprite.svg#icon-logo"></use>
-          </svg>
-        </a>
-      </div>
-      <ul class="page-footer__socials">
-        <li class="page-footer__social-item">
-          <a class="page-footer__social-link" href="#">
-            <svg class="page-footer__icon page-footer__icon--instagram" width="28" height="21">
-              <use xlink:href="../img/sprite.svg#icon-instagram"></use>
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo">
+          <a class="page-footer__logo-link" href="index.html">
+            <span class="visually-hidden">Главная</span>
+            <svg class="page-footer__logo-icon" width="102" height="34">
+              <use xlink:href="../img/sprite.svg#icon-logo"></use>
             </svg>
           </a>
-        </li>
-        <li class="page-footer__social-item">
-          <a class="page-footer__social-link" href="#">
-            <svg class="page-footer__icon icon-facebook" width="15" height="28">
-              <use xlink:href="../img/sprite.svg#icon-facebook"></use>
+        </div>
+        <ul class="page-footer__socials">
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link" href="#">
+              <svg class="page-footer__icon page-footer__icon--instagram" width="28" height="21">
+                <use xlink:href="../img/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link" href="#">
+              <svg class="page-footer__icon icon-facebook" width="15" height="28">
+                <use xlink:href="../img/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link" href="#">
+              <svg class="page-footer__icon icon-twitter" width="23" height="20">
+                <use xlink:href="../img/sprite.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="page-footer__copyright">
+          <a class="page-footer__copyright-link" href="#">Разработано
+            <svg class="page-footer__academy" width="27" height="34">
+              <use xlink:href="../img/sprite.svg#icon-academy"></use>
             </svg>
           </a>
-        </li>
-        <li class="page-footer__social-item">
-          <a class="page-footer__social-link" href="#">
-            <svg class="page-footer__icon icon-twitter" width="23" height="20">
-              <use xlink:href="../img/sprite.svg#icon-twitter"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-      <div class="page-footer__copyright">
-        <a class="page-footer__copyright-link" href="#">Разработано
-          <svg class="page-footer__academy" width="27" height="34">
-            <use xlink:href="../img/sprite.svg#icon-academy"></use>
-          </svg>
-        </a>
+        </div>
       </div>
     </footer>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(51487897, "init", {
+            id:51487897,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/51487897" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

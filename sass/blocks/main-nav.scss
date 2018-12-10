@@ -15,16 +15,16 @@
 
 .main-nav__link {
   padding         : 32px-5 30px 30px 23.5%;
-  
+
   display         : block;
-  
+
   text-decoration : none;
-  
+
   color           : $base-text;
   background-color: transparent;
 
   &[href]:hover {
-    opacity: .6;
+    color: $base-text-hover;
   }
   &[href]:active {
     opacity: .3;
@@ -111,6 +111,10 @@
   padding   : 22px-1 0 22px-4 0;
 
   text-align: center;
+
+  &:hover {
+    opacity: .6;
+  }
 }
 
 .main-nav__link--search,
@@ -142,7 +146,9 @@
   fill   : $text-remark;
 }
 
-.main-nav-item--delivery {
+.main-nav-item--delivery,
+.main-nav__new,
+.main-nav__sell-out {
   display: none;
 }
 
@@ -150,17 +156,17 @@
 // --------------------------------------------------
 @media (min-width: $tablet-width) {
   .main-nav__list {
+    @include font(15px, 24px);
+
     display      : flex;
 
     flex-wrap    : wrap;
-    align-content: stretch;
+    align-content: space-between;
     align-items  : stretch;
   }
 
   .main-nav__link {
-    padding   : 32px 30px 27px 33px;
-
-    box-sizing: border-box;
+    padding: 24px-7 15px 24px-7 8.8%;
   }
 
   .main-nav__catalog {
@@ -172,11 +178,13 @@
   }
 
   .main-nav__logo {
-    width: 48.2%;
+    min-width: 41%;
+
+    flex-grow: 1;
   }
 
   .main-nav__link--logo {
-    padding   : 22px 0 20px-4 13.5%;
+    padding   : 22px 0 20px-6 $indent-tablet-view;
 
     text-align: left;
   }
@@ -189,45 +197,45 @@
   }
 
   .main-nav__link--search {
+    padding     : 32px 30px 26px 33px;
+
     font-size   : 0;
 
     border-right: $border-line;
     border-left : $border-line;
   }
 
-  .main-nav__icon--search {
+  .main-nav__icon--search,
+  .main-nav__icon--cart {
     position : static;
 
     transform: translateY(5px);
   }
 
-  .main-nav__cart {
-    flex-grow: 1;
-  }
-
   .main-nav__link--cart {
-    padding-left: 26.4%;
+    padding   : 30px $indent-tablet-view 28px 39px;
+
+    font-size : 17px;
+
+    text-align: right;
   }
 
   .main-nav__icon--cart {
-    transform: translateY(5px);
+    margin-right: 20px;
+
+    transform   : translate(-7px, 5px);
   }
 
   .main-nav__catalog,
   .main-nav__order {
-    width : 26%;
+    width    : 26%;
+    min-width: 198px;
 
-    border: none;
-
-    & .main-nav__link {
-      @include font(15px, 24px);
-
-      padding: 24px-7 15px 24px-7 8.8%;
-    }
+    border   : none;
   }
 
-  .main-nav__catalog .main-nav__link {
-    padding-left: 24.4%;
+  .main-nav__link--catalog {
+    padding-left: $indent-tablet-view;
   }
 
   .main-nav__item--delivery {
@@ -235,18 +243,110 @@
 
     display    : block;
 
-    width      : 38.4%;
-
     border     : none;
 
     order      : 7;
+    flex-grow  : 1;
+  }
+
+  .main-nav__link--delivery {
+    padding    : 24px-7 13.3%;
+
+    font-weight: normal;
+
+    text-align : right;
+  }
+}
+
+// For Desktop
+// --------------------------------------------------
+@media (min-width: $desktop-width) {
+  .main-nav__list {
+    margin: 0 auto;
+
+    width : $body-desktop;
+  }
+
+  .main-nav__link {
+    padding   : 31px 0 33px 33px;
+  }
+
+  .main-nav__logo {
+    margin-right: auto;
+
+    min-width   : 150px;
+  }
+
+  .main-nav__link--logo {
+    box-sizing: border-box;
+    height    : 100%;
+
+    & img {
+      position : absolute;
+      top      : 8px;
+      left     : 50%;
+      width    : 148px;
+      height   : 73px;
+
+      transform: translateX(-50%);
+    }
+  }
+
+  .main-nav__catalog,
+  .main-nav__order {
+    width        : auto;
+    min-width    : 234px;
+
+    font-size    : 17px;
+
+    border-bottom: $border-line;
+
+    order        : -2;
+  }
+
+  .main-nav__catalog {
+    border-right: $border-line;
+  }
+
+  .main-nav__order .main-nav__link {
+    padding-left: 33px;
+  }
+
+  .main-nav__link--search {
+    padding: 32px 32px 26px 31px;
+  }
+
+  .main-nav__cart {
+    width: 316px;
+  }
+
+  .main-nav__link--cart {
+    padding: 30px 50px 33px 33px;
+  }
+
+  .main-nav__new,
+  .main-nav__sell-out {
+    display  : block;
+
+    min-width: 234px;
+
+    border   : none;
 
     & .main-nav__link {
-      @include font(15px, 24px);
-
-      padding    : 24px-7 15px;
-
-      font-weight: normal;
+      padding: 24-7px 0 24-7px 33px;
     }
+  }
+
+  .main-nav__link--catalog,
+  .main-nav__new .main-nav__link {
+    padding-left: 50px;
+  }
+
+  .main-nav__item--delivery {
+    flex-grow: 0;
+  }
+
+  .main-nav__link--delivery {
+    padding: 24-7px 50px;
   }
 }

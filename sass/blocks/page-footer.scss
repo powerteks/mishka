@@ -8,6 +8,16 @@
   display: none;
 }
 
+.page-footer__logo-link[href] {
+  &:hover .page-footer__logo-icon {
+    fill: $text-remark;
+  }
+
+  &:active .page-footer__logo-icon {
+    opacity: .3;
+  }
+}
+
 .page-footer__socials {
   margin         : 0;
   margin-left    : 8px;
@@ -86,10 +96,15 @@
 // --------------------------------------------------
 @media (min-width: $tablet-width) {
   .page-footer {
-    padding        : 0 $indent-tablet;
+    padding: 0;
+  }
 
+  .page-footer__wrapper {
+    margin         : 0 auto;
+    
+    width          : $body-tablet;
     display        : flex;
-
+    
     justify-content: space-between;
     align-items    : center;
   }
@@ -113,5 +128,11 @@
 
   .page-footer__copyright-link {
     justify-content: flex-end;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__wrapper {
+    width: $small-body-desktop;
   }
 }

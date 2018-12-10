@@ -1,6 +1,8 @@
 //modal window
 .modal {
   display: none;
+
+  width: 100%;
 }
 
 .modal--show {
@@ -127,13 +129,14 @@
 // --------------------------------------------------
 @media (min-width: $tablet-width) {
   .modal__products {
+    margin    : 0 auto;
     padding   : 0;
-
+    
     left      : 50vw;
     width     : 73.7%;
-
+    
     transform : translate(-50%, -50%);
-
+    
     border    : $border-line;
     box-shadow: 0 5px 10px $modal-shadow;
   }
@@ -163,5 +166,23 @@
   .modal__submit {
     margin-bottom: 45px;
     padding      : 15px 0 13px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .modal__products {
+    padding: 33px 0 0;
+    width  : 568px-2;
+  }
+
+  .modal__form {
+    margin: 0 auto;
+
+    width: 350px;
+  }
+
+  .modal__title {
+    margin-top    : 0;
+    letter-spacing: -0.2px;
   }
 }

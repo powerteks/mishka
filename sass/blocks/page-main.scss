@@ -15,8 +15,20 @@
   .page-main__appeal {
     @include font(17px, 30px);
 
-    margin: 73px auto 19px;
+    margin        : 74px auto 19px;
 
-    width : $body-tablet;
+    width         : $body-tablet;
+
+    letter-spacing: 0;
+  }
+}
+
+// For Desktop
+// --------------------------------------------------
+@media (min-width: $desktop-width) {
+  .page-main__appeal {
+    margin-top: 132px-10;
+
+    width     : $center-wrapper;
   }
 }
