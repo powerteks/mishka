@@ -1,2 +1,2 @@
 # mishka
-![Alt text](./img/sprite.svg)
+![Alt text](../img/sprite.svg)
