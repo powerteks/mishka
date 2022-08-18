@@ -1510,7 +1510,7 @@ body {
     width: 15px; }
   .form-order__input-check:checked + .form-order__checkbox::after {
     top: 24px;
-    left: 15px;
+    left: 16px;
     width: 30px; }
   .form-order__wrapper--name {
     padding: 44px 0 32px; }
